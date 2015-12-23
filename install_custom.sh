@@ -7,6 +7,8 @@ brew install ngrok
 brew install fzf
 /usr/local/opt/fzf/install
 
+brew install terraform
+
 brew tap caskroom/cask
 
 brew cask install google-chrome
