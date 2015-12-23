@@ -3,6 +3,9 @@
 brew install tree
 brew install ngrok
 brew install watch
+brew install ngrok
+brew install fzf
+/usr/local/opt/fzf/install
 
 brew tap caskroom/cask
 
