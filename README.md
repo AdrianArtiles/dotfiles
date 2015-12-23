@@ -20,3 +20,4 @@ This is assuming a brand new Mac out of the box.
 - Create ssh key, instructions [here](https://help.github.com/articles/generating-ssh-keys/).
 - Add ssh key to Github and Heroku, along with anywhere else.
 - Update iterm so new tabs open in same directory as last session.
+- Symlink MacVim (`ln -s /usr/local/Cellar/macvim/**version**/bin/mvim /usr/local/bin`)
