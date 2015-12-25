@@ -1,7 +1,6 @@
 #!/bin/sh
 
 brew install tree
-brew install ngrok
 brew install watch
 brew install ngrok
 brew install fzf
