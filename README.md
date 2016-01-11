@@ -10,7 +10,7 @@ This is assuming a brand new Mac out of the box.
 - Download everything from the app store, include xcode (for MacVim).
 - Run the Thoughtbot setup script from [here](https://github.com/thoughtbot/laptop).
 - Install the yadr dotfiles from [here](https://github.com/skwp/dotfiles).
-- Copy `.gitconfig.user`, `.vimrc.before`, `.zsh.before`, `.zsh.after`, and `.zsh.prompts` to `~`.
+- Copy `.gitconfig.user`, `.vimrc.before`, `.gvimrc`, `.zsh.before`, `.zsh.after`, and `.zsh.prompts` to `~`.
 - Set Mac defaults by running `update_mac_settings.sh`.
 - Install custom applications and such by running `install_custom.sh`.
 - Finish setup from yadr dotfiles [here](https://github.com/skwp/dotfiles#wait-youre-not-done-do-this).
