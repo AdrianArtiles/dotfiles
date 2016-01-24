@@ -1,5 +1,6 @@
 #!/bin/sh
 
+brew install go
 brew install tree
 brew install ngrok
 brew install watch
