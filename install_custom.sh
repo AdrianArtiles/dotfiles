@@ -7,6 +7,7 @@ brew install fzf
 /usr/local/opt/fzf/install
 
 brew install terraform
+brew install ansible
 
 brew tap caskroom/cask
 
