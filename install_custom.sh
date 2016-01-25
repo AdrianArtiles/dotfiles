@@ -23,5 +23,6 @@ brew cask install spotify
 brew cask install sublime-text
 brew cask install vlc
 brew cask install caffeine
+brew cask install dockertoolbox
 
 mkdir ~/Projects
