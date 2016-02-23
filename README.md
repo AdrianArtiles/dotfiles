@@ -12,7 +12,8 @@ This is assuming a brand new Mac out of the box.
 - Install the yadr dotfiles from [here](https://github.com/skwp/dotfiles).
 - Copy `.gitconfig.user`, `.vimrc.before`, `.gvimrc`, `.zsh.before`, `.zsh.after`, and `.zsh.prompts` to `~`.
 - Set Mac defaults by running `update_mac_settings.sh`.
-- Install custom applications and such by running `install_custom.sh`.
+- Install non-dev apps and stuff by running `install_user.sh`.
+- Install dev stuff `install_dev.sh`.
 - Finish setup from yadr dotfiles [here](https://github.com/skwp/dotfiles#wait-youre-not-done-do-this).
 - Move google chrome out of cask to ~/Application folder so it works with 1password.
 - Sync 1password vault.

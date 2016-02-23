@@ -1,12 +1,5 @@
 #!/bin/sh
 
-brew install go
-brew install tree
-brew install ngrok
-brew install watch
-brew install fzf
-/usr/local/opt/fzf/install
-
 brew tap caskroom/cask
 
 brew cask install google-chrome
@@ -22,5 +15,4 @@ brew cask install spotify
 brew cask install sublime-text
 brew cask install vlc
 brew cask install caffeine
-
-mkdir ~/Projects
+brew cask install dockertoolbox
