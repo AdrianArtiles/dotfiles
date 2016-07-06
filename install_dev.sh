@@ -18,5 +18,8 @@ brew install speedtest_cli
 brew install terraform
 brew install ansible
 
+# Vendors and Platforms
+brew install aws-elasticbeanstalk
+
 # Global Libraries
 npm install nodebootstrap -g
