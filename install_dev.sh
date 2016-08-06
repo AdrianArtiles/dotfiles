@@ -22,4 +22,4 @@ brew install ansible
 brew install aws-elasticbeanstalk
 
 # Global Libraries
-npm install nodebootstrap -g
+npm install -g nodebootstrap
