@@ -23,3 +23,4 @@ brew install aws-elasticbeanstalk
 
 # Global Libraries
 npm install -g nodebootstrap
+npm install -g live-server
