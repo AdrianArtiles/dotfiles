@@ -10,6 +10,7 @@ brew install watch
 brew install fzf
 /usr/local/opt/fzf/install
 brew cask install ngrok
+sudo easy_install pygments
 
 # Non-essential Tools
 brew install speedtest_cli
@@ -22,5 +23,4 @@ brew install ansible
 brew install aws-elasticbeanstalk
 
 # Global Libraries
-npm install -g nodebootstrap
 npm install -g live-server
