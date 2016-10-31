@@ -18,3 +18,4 @@ brew cask install caffeine
 brew cask install docker
 brew cask install torbrowser
 brew cask install calibre
+brew cask install rescuetime
