@@ -18,6 +18,7 @@ brew install speedtest_cli
 # Chosen Technologies
 brew install terraform
 brew install ansible
+brew install mongodb
 
 # Vendors and Platforms
 brew install aws-elasticbeanstalk
