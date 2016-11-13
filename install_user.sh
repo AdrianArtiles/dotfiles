@@ -6,7 +6,6 @@ brew cask install google-chrome
 brew cask install google-drive
 brew cask install dropbox
 brew cask install iterm2
-brew cask install seil
 brew cask install dropbox
 brew cask install numi
 brew cask install firefox
