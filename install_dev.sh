@@ -21,6 +21,7 @@ brew install ansible
 brew install mongodb
 
 # Vendors and Platforms
+brew install kops
 brew install aws-elasticbeanstalk
 
 # Global Libraries
