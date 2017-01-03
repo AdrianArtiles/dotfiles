@@ -11,6 +11,7 @@ brew install fzf
 /usr/local/opt/fzf/install
 brew cask install ngrok
 sudo easy_install pygments
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
 
 # Non-essential Tools
 brew install speedtest_cli
