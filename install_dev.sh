@@ -28,3 +28,5 @@ brew install aws-elasticbeanstalk
 
 # Global Libraries
 npm install -g live-server
+npm install -g create-react-app
+npm install -g loopback-cli
