@@ -25,6 +25,7 @@ brew install mongodb
 # Vendors and Platforms
 brew install kops
 brew install aws-elasticbeanstalk
+brew cask install google-cloud-sdk
 
 # Global Libraries
 npm install -g live-server
