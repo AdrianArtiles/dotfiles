@@ -4,6 +4,7 @@ brew tap caskroom/cask
 mkdir ~/Projects
 
 # Basic Tools
+brew install yarn
 brew install go
 brew install tree
 brew install watch
