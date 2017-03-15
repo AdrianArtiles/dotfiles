@@ -18,6 +18,7 @@ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | b
 brew install speedtest_cli
 brew cask install postico
 brew cask install robomongo
+npm install commitizen -g
 
 # Chosen Technologies
 brew install terraform
