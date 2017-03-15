@@ -16,7 +16,7 @@ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | b
 # Non-essential Tools
 brew install speedtest_cli
 brew cask install postico
-brew cask install mongodb-compass
+brew cask install robomongo
 
 # Chosen Technologies
 brew install terraform
