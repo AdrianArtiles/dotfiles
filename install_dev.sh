@@ -31,8 +31,9 @@ brew install kops
 brew install aws-elasticbeanstalk
 brew cask install google-cloud-sdk
 npm install -g netlify-cli
+npm install -g now
 
 # Global Libraries
 npm install -g live-server
 npm install -g create-react-app
-npm install -g loopback-cli
+npm install -g express-generator
