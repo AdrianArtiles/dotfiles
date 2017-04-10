@@ -18,4 +18,6 @@ brew cask install docker
 brew cask install torbrowser
 brew cask install calibre
 brew cask install rescuetime
-brew cask install flycut
+brew cask install istat-menus
+brew cask install bartender
+brew cask install alfred
