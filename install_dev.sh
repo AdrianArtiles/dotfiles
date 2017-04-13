@@ -22,7 +22,6 @@ npm install commitizen -g
 
 # Chosen Technologies
 brew install terraform
-brew install ansible
 brew install mongodb
 
 # Vendors and Platforms
