@@ -15,6 +15,7 @@ sudo easy_install pygments
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
 
 # Non-essential Tools
+brew cask install atom
 brew install speedtest_cli
 brew cask install postico
 brew cask install robomongo
