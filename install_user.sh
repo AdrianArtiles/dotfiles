@@ -23,3 +23,4 @@ brew cask install bartender
 brew cask install alfred
 brew cask install duet
 brew cask install grammarly
+brew cask install amazon-drive
