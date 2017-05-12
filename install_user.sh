@@ -25,3 +25,6 @@ brew cask install duet
 brew cask install grammarly
 brew cask install amazon-drive
 brew cask install veracrypt
+brew install rclone
+brew cask install rclone-browser
+brew cask install keybase
