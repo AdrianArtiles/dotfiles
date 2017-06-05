@@ -29,3 +29,4 @@ brew install rclone
 brew cask install rclone-browser
 brew cask install keybase
 brew cask install dash
+brew cask install mist
