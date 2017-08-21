@@ -10,6 +10,7 @@ brew install tree
 brew install watch
 brew install gpg
 brew install fzf
+brew install aspell
 /usr/local/opt/fzf/install
 brew cask install ngrok
 sudo easy_install pygments
