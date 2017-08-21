@@ -39,3 +39,4 @@ npm install -g now
 npm install -g live-server
 npm install -g create-react-app
 npm install -g express-generator
+npm install -g spike
