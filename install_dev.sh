@@ -8,6 +8,7 @@ brew install yarn
 brew install go
 brew install tree
 brew install watch
+brew install gpg
 brew install fzf
 /usr/local/opt/fzf/install
 brew cask install ngrok
