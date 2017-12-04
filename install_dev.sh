@@ -19,7 +19,6 @@ git clone https://github.com/creationix/nvm.git ~/.nvm
 cd ~/.nvm && git checkout v0.33.6
 
 # Non-essential Tools
-brew cask install atom
 brew install speedtest_cli
 brew cask install postico
 brew cask install robomongo
