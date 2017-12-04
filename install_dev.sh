@@ -40,3 +40,6 @@ npm install -g live-server
 npm install -g create-react-app
 npm install -g express-generator
 npm install -g spike
+npm install -g feathers-cli
+npm install -g serverless
+npm install -g eslint
