@@ -22,7 +22,7 @@ cd ~/.nvm && git checkout v0.33.6
 brew install speedtest_cli
 brew cask install postico
 brew cask install robomongo
-npm install commitizen -g
+npm install -g commitizen
 
 # Chosen Technologies
 brew install terraform
