@@ -31,7 +31,6 @@ brew install mongodb
 # Vendors and Platforms
 brew install hub
 brew install kops
-brew install aws-elasticbeanstalk
 brew cask install google-cloud-sdk
 npm install -g netlify-cli
 npm install -g now
