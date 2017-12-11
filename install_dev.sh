@@ -21,7 +21,7 @@ cd ~/.nvm && git checkout v0.33.6
 # Non-essential Tools
 brew install speedtest_cli
 brew cask install postico
-brew cask install robomongo
+brew cask install robo-3t
 npm install -g commitizen
 
 # Chosen Technologies
