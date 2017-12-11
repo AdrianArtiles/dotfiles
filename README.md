@@ -16,7 +16,6 @@ This is assuming a brand new Mac out of the box.
 - Install non-dev apps and stuff by running `install_user.sh`.
 - Install dev stuff `install_dev.sh`.
 - Finish setup from yadr dotfiles [here](https://github.com/skwp/dotfiles#wait-youre-not-done-do-this).
-- Move google chrome out of cask to ~/Application folder so it works with 1password.
 - Sync 1password vault.
 - Add Google account to computer.
 - Create ssh key, instructions [here](https://help.github.com/articles/generating-ssh-keys/).
