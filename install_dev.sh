@@ -38,6 +38,7 @@ npm install -g now
 # Global Libraries
 npm install -g live-server
 npm install -g create-react-app
+npm install -g create-next-app
 npm install -g express-generator
 npm install -g spike
 npm install -g feathers-cli
