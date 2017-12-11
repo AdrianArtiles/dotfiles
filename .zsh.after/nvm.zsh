@@ -17,6 +17,6 @@ load-nvmrc() {
   fi
 }
 
-autoload -U add-zsh-hook
-add-zsh-hook chpwd load-nvmrc
-load-nvmrc
+# autoload -U add-zsh-hook
+# add-zsh-hook chpwd load-nvmrc
+# load-nvmrc
