@@ -7,6 +7,7 @@ This is assuming a brand new Mac out of the box.
 # The Steps
 
 - Change computer name.
+- Map caps lock key to escape.
 - Download everything from the app store, include xcode (for MacVim).
 - Run the Thoughtbot setup script from [here](https://github.com/thoughtbot/laptop).
 - Install the yadr dotfiles from [here](https://github.com/skwp/dotfiles).
