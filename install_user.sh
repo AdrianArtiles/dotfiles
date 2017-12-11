@@ -18,7 +18,6 @@ brew cask install torbrowser
 brew cask install setapp
 brew cask install calibre
 brew cask install rescuetime
-brew cask install istat-menus
 brew cask install bartender
 brew cask install alfred
 brew cask install duet
