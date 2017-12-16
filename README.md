@@ -10,9 +10,9 @@ These steps set up a brand new mac out of the box.
 
 # The Steps
 
-- Change computer name.
 - Map caps lock key to escape.
 - Install used applications from the Mac App store, including xcode (required for MacVim).
+- Open/setup xcode
 - Run the Thoughtbot setup script from [here](https://github.com/thoughtbot/laptop).
 - Install the yadr dotfiles from [here](https://github.com/skwp/dotfiles).
 - Copy or symlink `.gitconfig.user`, `.vimrc.before`, `.gvimrc`, `.zsh.before`, `.zsh.after`, and `.zsh.prompts` to `~/`.
@@ -27,4 +27,6 @@ These steps set up a brand new mac out of the box.
 - Add ssh key to Github, Heroku, and so on.
 - Set Mac defaults by running `update_mac_settings.sh`.
 - Install used applications from Setapp.
+- Setup Alfred, Google Drive, Bartender.
+- Change computer name.
 - Setup personal secure backup scheme. Further details in Block.
