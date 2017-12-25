@@ -11,6 +11,7 @@ brew install watch
 brew install gpg
 brew install fzf
 brew install aspell
+brew install jq
 /usr/local/opt/fzf/install
 brew cask install ngrok
 sudo easy_install pygments
