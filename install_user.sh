@@ -16,6 +16,7 @@ brew cask install vlc
 brew cask install caffeine
 brew cask install docker
 brew cask install torbrowser
+brew cask install tunnelblick
 brew cask install setapp
 brew cask install calibre
 brew cask install rescuetime
