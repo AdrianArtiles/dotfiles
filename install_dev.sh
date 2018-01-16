@@ -38,10 +38,12 @@ npm install -g now
 
 # Global Libraries
 npm install -g live-server
+npm install -g project-name-generator
 npm install -g create-react-app
 npm install -g create-next-app
 npm install -g express-generator
 npm install -g spike
+npm install -g gatsby-cli
 npm install -g feathers-cli
 npm install -g serverless
 npm install -g eslint
