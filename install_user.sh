@@ -31,4 +31,6 @@ brew cask install keybase
 brew cask install dash
 brew cask install electrum
 brew cask install mist
+brew cask install imageoptim
 brew cask install disk-inventory-x
+brew cask install bettertouchtool
