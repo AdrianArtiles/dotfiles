@@ -1,1 +1,2 @@
-prompt steff
+# prompt steff
+prompt pure
