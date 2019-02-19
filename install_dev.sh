@@ -15,9 +15,6 @@ brew install jq
 /usr/local/opt/fzf/install
 brew cask install ngrok
 sudo easy_install pygments
-# curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.6/install.sh | bash
-git clone https://github.com/creationix/nvm.git ~/.nvm
-cd ~/.nvm && git checkout v0.33.6
 
 # Non-essential Tools
 brew install speedtest_cli
