@@ -20,7 +20,6 @@ sudo easy_install pygments
 brew install speedtest_cli
 brew cask install postico
 brew cask install robo-3t
-npm install -g commitizen
 
 # Chosen Technologies
 brew install terraform
@@ -30,17 +29,9 @@ brew install mongodb
 brew install hub
 brew install kops
 brew cask install google-cloud-sdk
-npm install -g netlify-cli
-npm install -g now
+brew install awscli
 
 # Global Libraries
 npm install -g live-server
-npm install -g project-name-generator
-npm install -g create-react-app
-npm install -g create-next-app
-npm install -g express-generator
-npm install -g spike
-npm install -g gatsby-cli
-npm install -g feathers-cli
-npm install -g serverless
+npm install -g tldr
 npm install -g eslint
