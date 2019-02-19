@@ -11,7 +11,10 @@ brew cask install numi
 brew cask install firefox
 brew cask install slack
 brew cask install spotify
+brew cask install whatsapp
+brew cask install telegram
 brew cask install sublime-text
+brew cask install iina
 brew cask install vlc
 brew cask install caffeine
 brew cask install docker
@@ -22,12 +25,14 @@ brew cask install calibre
 brew cask install rescuetime
 brew cask install bartender
 brew cask install alfred
+brew cask install contexts
 brew cask install duet
 brew cask install grammarly
 brew cask install veracrypt
 brew install rclone
 brew cask install rclone-browser
 brew cask install keybase
+brew cask install station
 brew cask install dash
 brew cask install electrum
 brew cask install mist
