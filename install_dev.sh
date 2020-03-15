@@ -11,11 +11,17 @@ brew install tree
 brew install watch
 brew install gpg
 brew install fzf
+brew install fasd
+brew install fd
 brew install jq
 brew install wifi-password
 /usr/local/opt/fzf/install
 brew cask install ngrok
 sudo easy_install pygments
+
+# Install Neo/Vim Plugin Manager
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # Non-essential Tools
 brew install speedtest_cli
