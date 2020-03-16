@@ -14,6 +14,9 @@ brew install fzf
 brew install fasd
 brew install fd
 brew install jq
+brew install bat
+brew install ccat
+brew install exa
 brew install wifi-password
 /usr/local/opt/fzf/install
 brew cask install ngrok

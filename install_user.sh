@@ -16,8 +16,9 @@ brew cask install sublime-text
 brew cask install iina
 brew cask install vlc
 brew cask install caffeine
+brew cask install hyperdock
 brew cask install docker
-brew cask install torbrowser
+brew cask install tor-browser
 brew cask install tunnelblick
 # brew cask install numi # setapp
 # brew cask install bartender # setapp
