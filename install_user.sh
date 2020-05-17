@@ -9,6 +9,7 @@ brew cask install dropbox
 brew cask install iterm2
 brew cask install firefox
 brew cask install slack
+brew cask install zoomus
 brew cask install spotify
 brew cask install whatsapp
 brew cask install telegram
@@ -20,8 +21,6 @@ brew cask install hyperdock
 brew cask install docker
 brew cask install tor-browser
 brew cask install tunnelblick
-# brew cask install numi # setapp
-# brew cask install bartender # setapp
 brew cask install setapp
 brew cask install calibre
 brew cask install rescuetime
@@ -38,3 +37,5 @@ brew cask install steam
 brew cask install electrum
 brew cask install imageoptim
 brew cask install omnidisksweeper
+brew cask install linphone
+brew cask install shadow
