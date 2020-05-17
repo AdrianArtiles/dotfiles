@@ -15,18 +15,19 @@ brew install fasd
 brew install fd
 brew install jq
 brew install bat
-brew install ccat
 brew install exa
 brew install wifi-password
 /usr/local/opt/fzf/install
 brew cask install ngrok
-sudo easy_install pygments
 
 # Install Neo/Vim Plugin Manager
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # Non-essential Tools
+brew install pjproject
 brew install speedtest_cli
 brew cask install visual-studio-code
 code --install-extension vscodevim.vim
@@ -44,3 +45,4 @@ brew install awscli
 npm install -g live-server
 npm install -g tldr
 npm install -g eslint
+npm install -g neovim
