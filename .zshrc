@@ -67,10 +67,11 @@ alias git='noglob git'
 alias ll='ls -alGh'
 alias ls='ls -Gh'
 alias cdp='cd ~/Projects'
+alias ccat='bat -pp'
 
 # advanced ls when in new directory
 chpwd() {
-  exa --all --group-directories-first
+  exa --all --group-directories-first --header --long
 }
 
 # custom adig command
