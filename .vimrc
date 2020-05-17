@@ -51,15 +51,6 @@ set expandtab
 " http://items.sjbach.com/319/configuring-vim-right
 set hidden
 
-" Reload files changed outside vim
-set autoread
-
-" tab related setting
-set tabstop=2
-set shiftwidth=2
-set expandtab
-set smarttab
-
 set mouse=a
 set ignorecase
 set smartcase
@@ -67,8 +58,8 @@ set smartcase
 set nofoldenable        "dont fold by default
 
 " ================ Completion =======================
-set wildmode=list:longest
-set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
+" set wildmode=list:longest
+" set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
 
 filetype plugin on
 filetype indent on
@@ -147,6 +138,8 @@ omap if <Plug>(coc-funcobj-i)
 omap af <Plug>(coc-funcobj-a)
 
 
+nmap sj :SplitjoinSplit<cr>
+nmap sk :SplitjoinJoin<cr>
 
 " We don't want to use Ctrl-p as the mapping because
 " it interferes with YankRing (paste, then hit ctrl-p)
@@ -223,6 +216,7 @@ syntax on
 colorscheme onedark
 
 
+let g:coc_global_extensions = ['coc-tsserver', 'coc-eslint', 'coc-json', 'coc-json', 'coc-prettier', 'coc-css', 'coc-ultisnips', 'coc-snippets']
 
 
 " ==== NERD tree
