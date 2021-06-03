@@ -10,7 +10,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'tomtom/tcomment_vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'kshenoy/vim-signature'
-Plug '/usr/local/opt/fzf'
+" Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'nathanaelkane/vim-indent-guides'
@@ -24,6 +24,7 @@ Plug 'bogado/file-line'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'joshdick/onedark.vim'
 Plug 'nelstrom/vim-visual-star-search'
+Plug 'tmux-plugins/vim-tmux-focus-events'
 call plug#end()
 
 
@@ -200,6 +201,7 @@ nnoremap <M-]> f]ci]
 
 
 
+au FocusGained,BufEnter * :checktime
 
 
 
@@ -217,23 +219,3 @@ colorscheme onedark
 
 
 let g:coc_global_extensions = ['coc-tsserver', 'coc-eslint', 'coc-json', 'coc-json', 'coc-prettier', 'coc-css', 'coc-ultisnips', 'coc-snippets']
-
-
-" ==== NERD tree
-" Open the project tree and expose current file in the nerdtree with Ctrl-\
-" " calls NERDTreeFind iff NERDTree is active, current window contains a modifiable file, and we're not in vimdiff
-" nnoremap <silent> <C-\> :call OpenNerdTree()<CR>
-nnoremap <silent> <C-backslash> :call OpenNerdTree()<CR>
-
-function! OpenNerdTree()
-  echo "starting v2"
-  echo !&diff
-  if (&modifiable && (strlen(expand('%')) > 0) && !&diff)
-    echo "first if"
-    NERDTreeFind
-  else
-    echo "second if"
-    NERDTreeToggle
-  endif
-endfunction
-let g:NERDTreeWinSize = 30
