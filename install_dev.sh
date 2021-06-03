@@ -1,6 +1,7 @@
 #!/bin/sh
 
 brew tap caskroom/cask
+brew tap elastic/tap
 mkdir ~/Projects
 
 # Basic Tools
@@ -16,9 +17,12 @@ brew install fd
 brew install jq
 brew install bat
 brew install exa
+brew install cloc
 brew install wifi-password
+brew install ffmpeg
 /usr/local/opt/fzf/install
-brew cask install ngrok
+brew install --cask ngrok
+brew install ipfs
 
 # Install Neo/Vim Plugin Manager
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
@@ -29,17 +33,21 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 # Non-essential Tools
 brew install pjproject
 brew install speedtest_cli
-brew cask install visual-studio-code
+brew install --cask visual-studio-code
+brew install --cask runjs
 code --install-extension vscodevim.vim
 
 # Chosen Technologies
 brew install terraform
 brew install mongodb
+brew install elastic/tap/elasticsearch-full
+brew install elastic/tap/kibana-full                                                                         ✘ 130
 
 # Vendors and Platforms
 brew install hub
-brew cask install google-cloud-sdk
+brew install --cask google-cloud-sdk
 brew install awscli
+brew install stripe/stripe-cli/stripe
 
 # Global Libraries
 npm install -g live-server
