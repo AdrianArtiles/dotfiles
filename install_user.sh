@@ -27,12 +27,13 @@ brew cask install rescuetime
 brew cask install alfred
 brew cask install contexts
 brew cask install duet
+brew cask install microsoft-outlook
+brew cask install microsoft-excel
 brew cask install grammarly
+brew install --cask macdown
 brew cask install veracrypt
 brew install rclone
-brew cask install rclone-browser
 brew cask install keybase
-brew cask install dash
 brew cask install steam
 brew cask install electrum
 brew cask install imageoptim
