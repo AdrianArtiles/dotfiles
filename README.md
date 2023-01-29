@@ -27,7 +27,7 @@ These steps set up a brand new mac out of the box.
 - Add ssh key to Github, Heroku, and so on.
 - Set Mac defaults by running `update_mac_settings.sh`.
 - Install favorited applications from Setapp.
-- Setup Alfred, Google Drive, Bartender.
+- Setup Raycast, Google Drive, Bartender.
 - Change computer name.
 - Setup personal secure backup scheme. Further details in Block.
 
