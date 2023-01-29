@@ -16,9 +16,10 @@ These steps set up a brand new mac out of the box.
 - Run the Thoughtbot setup script from [here](https://github.com/thoughtbot/laptop).
 - Clone this repo to `~/`
 - Symlink `.zshrc`, `.vimrc`, `.gitconfig`, and `.default-npm-packages` to `~/`.
+- Install NvChad `git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1`
 - Install user apps and etc. by running `install_user.sh`.
 - Install dev apps and etc. by running `install_dev.sh`.
-- Configure iTerm so new tabs open in same directory as last session.
+- Configure iTerm so new tabs open in same directory as last session, and set chosen nerdfont
 - Sync 1Password vault.
 - Add Google account to computer.
 - Symlink VeraCrypt (`ln -s /Applications/VeraCrypt.app/Contents/MacOS/VeraCrypt /usr/local/bin/veracrypt`)
@@ -46,3 +47,7 @@ let &packpath=&runtimepath
 source ~/.vimrc
 ```
 `:checkhealth`
+
+"caskroom/cask was moved, tap homebrew/cask-cask"
+install prezto
+  comment out .zpreztorc / zstyle things already covered (in runcoms/zpreztorc)
