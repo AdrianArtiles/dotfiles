@@ -2,24 +2,30 @@
 
 brew tap caskroom/cask
 brew tap elastic/tap
+brew tap homebrew/cask-fonts
 mkdir ~/Projects
 
 # Basic Tools
 brew install neovim
-brew install yarn
+# brew install yarn
+brew install pnpm
 brew install go
 brew install tree
 brew install watch
 brew install gpg
 brew install fzf
+brew install ripgrep
 brew install fasd
 brew install fd
 brew install jq
 brew install bat
 brew install exa
 brew install cloc
+brew install qrencode
 brew install wifi-password
 brew install ffmpeg
+brew install http-server
+brew install git-gui
 /usr/local/opt/fzf/install
 brew install --cask ngrok
 brew install ipfs
@@ -35,9 +41,16 @@ brew install pjproject
 brew install speedtest_cli
 brew install --cask visual-studio-code
 brew install --cask runjs
+brew install --cask altair-graphql-client
+brew install --cask http-toolkit
+# brew install --cask another-redis-desktop-manager
+brew install --cask redisinsight
+brew install --cask font-jetbrains-mono-nerd-font
 code --install-extension vscodevim.vim
 
 # Chosen Technologies
+brew install neovim
+brew install hasura-cli
 brew install terraform
 brew install mongodb
 brew install elastic/tap/elasticsearch-full
@@ -45,12 +58,13 @@ brew install elastic/tap/kibana-full                                            
 
 # Vendors and Platforms
 brew install hub
+brew install --cask docker
 brew install --cask google-cloud-sdk
 brew install awscli
+brew install rover
 brew install stripe/stripe-cli/stripe
 
 # Global Libraries
 npm install -g live-server
 npm install -g tldr
 npm install -g eslint
-npm install -g neovim
