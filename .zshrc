@@ -3,11 +3,12 @@ export PATH="$HOME/.bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 typeset -gU cdpath fpath mailpath path
 
-# enable advanced command autocomplete
-autoload -Uz compinit
-
 # setup asdf
 source $HOME/.asdf/asdf.sh
+fpath=(${ASDF_DIR}/completions $fpath)
+
+# enable advanced command autocomplete
+autoload -Uz compinit
 
 # setup fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -40,8 +41,6 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-source $HOME/.asdf/completions/asdf.bash
-
 prompt pure
 
 export EDITOR='vim'
@@ -68,6 +67,10 @@ alias ll='ls -alGh'
 alias ls='ls -Gh'
 alias cdp='cd ~/Projects'
 alias ccat='bat -pp'
+alias nscheck='host -t NS -W 2'
+
+alias random_words='echo ">>>>>>>>>> Adjectives"; shuf -n 5 ~/computer-setup/local/adjectives.txt; echo ">>>>>>>>>> Nouns"; shuf -n 5 ~/computer-setup/local/nouns.txt'
+source $HOME/computer-setup/local/cnam.zsh
 
 # advanced ls when in new directory
 chpwd() {
@@ -93,4 +96,9 @@ adig() {
   for t in "${types[@]}"; do
     _dig "$domain" "$t"
   done
+}
+
+# custom whois check
+wicheck() {
+  whois $1 | grep --color=never -i 'no match\|not found'
 }
