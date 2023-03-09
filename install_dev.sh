@@ -26,9 +26,10 @@ brew install wifi-password
 brew install ffmpeg
 brew install http-server
 brew install git-gui
-/usr/local/opt/fzf/install
 brew install --cask ngrok
 brew install ipfs
+
+$(brew --prefix)/opt/fzf/install
 
 # Install Neo/Vim Plugin Manager
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
