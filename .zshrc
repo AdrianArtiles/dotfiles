@@ -3,16 +3,8 @@ export PATH="$HOME/.bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 typeset -gU cdpath fpath mailpath path
 
-# setup asdf
-source $HOME/.asdf/asdf.sh
-fpath=(${ASDF_DIR}/completions $fpath)
-
 # enable advanced command autocomplete
 autoload -Uz compinit
-
-# setup fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-eval "$(fasd --init auto)"
 
 zstyle ':prezto:load' pmodule \
   'environment' \
@@ -40,6 +32,10 @@ zstyle ':prezto:module:ssh-agent' forwarding 'yes'
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
+
+# setup fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+eval "$(fasd --init auto)"
 
 prompt pure
 
@@ -102,3 +98,15 @@ adig() {
 wicheck() {
   whois $1 | grep --color=never -i 'no match\|not found'
 }
+
+# search old zhistory
+zhistory_backup_fzf() {
+  cat ~/.zsh_history.backup | fzf
+}
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# setup asdf
+# source $HOME/.asdf/asdf.sh
+fpath=(${ASDF_DIR}/completions $fpath)
+source $(brew --prefix asdf)/libexec/asdf.sh
