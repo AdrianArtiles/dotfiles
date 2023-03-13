@@ -17,6 +17,8 @@ These steps set up a brand new mac out of the box.
 - Clone this repo to `~/`
 - Symlink `.zshrc`, `.vimrc`, `.gitconfig`, and `.default-npm-packages` to `~/`.
 - Install NvChad `git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1`
+  - Add custom files to `~/.config/nvim/lua/custom`
+  - Run `:PackerUpdate`
 - Install user apps and etc. by running `install_user.sh`.
 - Install dev apps and etc. by running `install_dev.sh`.
 - Configure iTerm so new tabs open in same directory as last session, and set chosen nerdfont
@@ -25,7 +27,7 @@ These steps set up a brand new mac out of the box.
 - Symlink VeraCrypt (`ln -s /Applications/VeraCrypt.app/Contents/MacOS/VeraCrypt /usr/local/bin/veracrypt`)
 - Create ssh key, instructions [here](https://help.github.com/articles/generating-ssh-keys/).
 - Add ssh key to Github, Heroku, and so on.
-- Set Mac defaults by running `update_mac_settings.sh`.
+- Set Mac defaults using commands from [MacOS Defaults](https://macos-defaults.com/). (Inspiration [here](https://github.com/mathiasbynens/dotfiles/blob/main/.macos))
 - Install favorited applications from Setapp.
 - Setup Raycast, Google Drive, Bartender.
 - Change computer name.
