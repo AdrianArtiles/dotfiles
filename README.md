@@ -21,6 +21,8 @@ These steps set up a brand new mac out of the box.
   - Run `:PackerUpdate`
 - Install user apps and etc. by running `install_user.sh`.
 - Install dev apps and etc. by running `install_dev.sh`.
+- Install prezto
+  - comment `.zshrc` entries already in `~/.zprezto/runcoms/zpreztorc`
 - Configure iTerm so new tabs open in same directory as last session, and set chosen nerdfont
 - Sync 1Password vault.
 - Add Google account to computer.
@@ -49,7 +51,3 @@ let &packpath=&runtimepath
 source ~/.vimrc
 ```
 `:checkhealth`
-
-"caskroom/cask was moved, tap homebrew/cask-cask"
-install prezto
-  comment out .zpreztorc / zstyle things already covered (in runcoms/zpreztorc)
