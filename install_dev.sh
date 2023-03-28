@@ -62,6 +62,7 @@ brew install hub
 brew install --cask docker
 brew install --cask google-cloud-sdk
 brew install awscli
+brew install CrunchyData/brew/cb
 brew install rover
 brew install stripe/stripe-cli/stripe
 
