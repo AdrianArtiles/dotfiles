@@ -58,7 +58,7 @@ brew install elastic/tap/elasticsearch-full
 brew install elastic/tap/kibana-full                                                                         ✘ 130
 
 # Vendors and Platforms
-brew install hub
+brew install gh
 brew install --cask docker
 brew install --cask google-cloud-sdk
 brew install awscli
