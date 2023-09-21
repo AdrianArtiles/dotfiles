@@ -53,14 +53,16 @@ brew install mitmproxy
 brew install --cask redisinsight
 brew install --cask font-jetbrains-mono-nerd-font
 code --install-extension vscodevim.vim
+brew install --cask cursor
+brew install clamav
 
 # Chosen Technologies
 brew install neovim
 brew install hasura-cli
 brew install terraform
-brew install mongodb
-brew install elastic/tap/elasticsearch-full
-brew install elastic/tap/kibana-full                                                                         ✘ 130
+# brew install mongodb
+# brew install elastic/tap/elasticsearch-full
+# brew install elastic/tap/kibana-full
 
 # Vendors and Platforms
 brew install gh
