@@ -25,10 +25,12 @@ brew install cloc
 brew install qrencode
 brew install wifi-password
 brew install ffmpeg
+brew install shred
 brew install http-server
 brew install git-gui
 brew install --cask ngrok
 brew install ipfs
+brew install p7zip
 
 $(brew --prefix)/opt/fzf/install
 
