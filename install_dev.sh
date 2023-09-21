@@ -72,6 +72,8 @@ brew install awscli
 brew install CrunchyData/brew/cb
 brew install rover
 brew install stripe/stripe-cli/stripe
+brew install railway
+brew install flyctl
 
 # Global Libraries
 npm install -g live-server
