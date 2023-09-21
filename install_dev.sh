@@ -18,6 +18,7 @@ brew install ripgrep
 brew install fasd
 brew install fd
 brew install jq
+brew install fx
 brew install bat
 brew install exa
 brew install cloc
