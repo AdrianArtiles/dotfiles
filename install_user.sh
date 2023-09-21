@@ -17,7 +17,7 @@ brew install --cask sublime-text
 brew install --cask iina
 brew install --cask vlc
 # brew install --cask caffeine
-brew install --cask hyperdock
+# brew install --cask hyperdock # no longer supported =(
 brew install --cask docker
 brew install --cask discord
 brew install --cask tor-browser
