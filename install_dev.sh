@@ -47,6 +47,8 @@ brew install --cask visual-studio-code
 brew install --cask runjs
 brew install --cask altair-graphql-client
 brew install --cask http-toolkit
+brew install --cask charles
+brew install mitmproxy
 # brew install --cask another-redis-desktop-manager
 brew install --cask redisinsight
 brew install --cask font-jetbrains-mono-nerd-font
