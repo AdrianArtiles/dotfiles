@@ -1,3 +1,7 @@
+" NOTE: As of now this file is no longer being used.
+" NeoVim config is currently being managed by NvChad,
+" and this file may be deleted
+
 set nocompatible
 
 call plug#begin()

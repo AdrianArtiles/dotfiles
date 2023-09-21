@@ -110,3 +110,6 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 # source $HOME/.asdf/asdf.sh
 fpath=(${ASDF_DIR}/completions $fpath)
 source $(brew --prefix asdf)/libexec/asdf.sh
+
+# setup GitHub Copilot
+eval "$(github-copilot-cli alias -- "$0")"
