@@ -3,11 +3,13 @@
 brew tap caskroom/cask
 brew tap elastic/tap
 brew tap homebrew/cask-fonts
+brew tap oven-sh/bun
 mkdir ~/Projects
 
 # Basic Tools
 brew install neovim
 # brew install yarn
+brew install bun
 brew install pnpm
 brew install go
 brew install tree
