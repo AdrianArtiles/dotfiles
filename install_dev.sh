@@ -4,6 +4,7 @@ brew tap caskroom/cask
 brew tap elastic/tap
 brew tap homebrew/cask-fonts
 brew tap oven-sh/bun
+brew tap hashicorp/tap
 mkdir ~/Projects
 
 # Basic Tools
@@ -61,7 +62,7 @@ brew install clamav
 # Chosen Technologies
 brew install neovim
 brew install hasura-cli
-brew install terraform
+brew install hashicorp/tap/terraform
 # brew install mongodb
 # brew install elastic/tap/elasticsearch-full
 # brew install elastic/tap/kibana-full
