@@ -36,8 +36,8 @@ eval "$(zoxide init zsh)"
 fpath=(${ASDF_DIR}/completions $fpath)
 source $(brew --prefix asdf)/libexec/asdf.sh
 
-export EDITOR='vim'
-export VISUAL='vim'
+export EDITOR='nvim'
+export VISUAL='nvim'
 export PAGER='less'
 
 bindkey -v
