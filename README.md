@@ -18,11 +18,10 @@ These steps set up a brand new mac out of the box.
 - Symlink `.zshrc`, `.vimrc`, `.gitconfig`, and `.default-npm-packages` to `~/`.
 - Install NvChad `git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1`
   - Add custom files to `~/.config/nvim/lua/custom`
-  - Run `:PackerUpdate`
 - Install user apps and etc. by running `install_user.sh`.
 - Install dev apps and etc. by running `install_dev.sh`.
 - Install prezto
-  - comment `.zshrc` entries already in `~/.zprezto/runcoms/zpreztorc`
+  - update `.zshrc` to replace entries in `~/.zprezto/runcoms/zpreztorc`
 - Configure iTerm so new tabs open in same directory as last session, and set chosen nerdfont
 - Sync 1Password vault.
 - Add Google account to computer.
@@ -42,12 +41,3 @@ These steps set up a brand new mac out of the box.
 createdb
 createuser -s postgres
 ```
-
-## Setup NeoVim
-`~/.config/nvim/init.vim`
-```shell
-set runtimepath^=~/.vim runtimepath+=~/.vim/after
-let &packpath=&runtimepath
-source ~/.vimrc
-```
-`:checkhealth`
