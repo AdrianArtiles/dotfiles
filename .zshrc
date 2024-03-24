@@ -30,8 +30,8 @@ zstyle ':prezto:module:history-substring-search' fuzzy 'yes'
 zstyle ':prezto:module:prompt' theme 'pure'
 source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
 fpath=(${ASDF_DIR}/completions $fpath)
 source $(brew --prefix asdf)/libexec/asdf.sh
