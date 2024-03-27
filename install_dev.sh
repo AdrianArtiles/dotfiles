@@ -31,6 +31,7 @@ brew install btop
 brew install htop
 brew install tlrc
 brew install jesseduffield/lazygit/lazygit
+brew install gnu-sed
 
 # Additional Tools
 # brew install pjproject
