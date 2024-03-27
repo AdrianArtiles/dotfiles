@@ -16,8 +16,7 @@ These steps set up a brand new mac out of the box.
 - Run the Thoughtbot setup script from [here](https://github.com/thoughtbot/laptop).
 - Clone this repo to `~/`
 - Symlink `.zshrc`, `.vimrc`, `.gitconfig`, and `.default-npm-packages` to `~/`.
-- Install NvChad `git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1`
-  - Add custom files to `~/.config/nvim/lua/custom`
+- Install LazyVim
 - Install user apps and etc. by running `install_user.sh`.
 - Install dev apps and etc. by running `install_dev.sh`.
 - Install prezto
