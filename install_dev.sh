@@ -30,6 +30,7 @@ brew install midnight-commander
 brew install btop
 brew install htop
 brew install tlrc
+brew install jesseduffield/lazygit/lazygit
 
 # Additional Tools
 # brew install pjproject
