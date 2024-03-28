@@ -39,6 +39,7 @@ source $(brew --prefix asdf)/libexec/asdf.sh
 export EDITOR='nvim'
 export VISUAL='nvim'
 export PAGER='less'
+export GPG_TTY=`tty`
 
 bindkey -v
 bindkey '^a' beginning-of-line
