@@ -27,7 +27,7 @@ brew install ipfs
 brew install p7zip
 brew install imagemagick
 brew install midnight-commander
-brew install btop
+# brew install btop
 brew install htop
 brew install tlrc
 brew install jesseduffield/lazygit/lazygit
