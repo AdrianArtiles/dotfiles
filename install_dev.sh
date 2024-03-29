@@ -29,7 +29,7 @@ brew install imagemagick
 brew install midnight-commander
 # brew install btop
 brew install htop
-brew install tlrc
+brew install tldr
 brew install jesseduffield/lazygit/lazygit
 brew install gnu-sed
 brew install moreutils
