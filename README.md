@@ -23,7 +23,7 @@ These steps set up a brand new mac out of the box.
 - Install [prezto](https://github.com/sorin-ionescu/prezto).
   - update `.zshrc` to replace entries in `~/.zprezto/runcoms/zpreztorc`
 - Install [LazyVim](https://github.com/LazyVim/LazyVim).
-- Configure iTerm: new tabs open in same directory as last session, and set chosen font to installed nerdfont
+- Configure iTerm: new tabs open in same directory as last session, font is installed nerdfont, unlimited scrollback
 - Sync keepass vault (using Strongbox).
 - Add Google account to computer (add to settings -> Internet Accounts).
 - Create ssh key ([instructions](https://help.github.com/articles/generating-ssh-keys/)).
