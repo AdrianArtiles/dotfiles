@@ -22,7 +22,7 @@ These steps set up a brand new mac out of the box.
 - Install prezto
   - update `.zshrc` to replace entries in `~/.zprezto/runcoms/zpreztorc`
 - Configure iTerm so new tabs open in same directory as last session, and set chosen nerdfont
-- Sync 1Password vault.
+- Sync keepass vault (strongbox).
 - Add Google account to computer.
 - Symlink VeraCrypt (`ln -s /Applications/VeraCrypt.app/Contents/MacOS/VeraCrypt /usr/local/bin/veracrypt`)
 - Create ssh key, instructions [here](https://help.github.com/articles/generating-ssh-keys/).
