@@ -33,6 +33,9 @@ brew install tldr
 brew install jesseduffield/lazygit/lazygit
 brew install gnu-sed
 brew install moreutils
+brew install restic
+brew install rsync
+brew install rclone
 
 # Additional Tools
 # brew install pjproject
