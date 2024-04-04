@@ -47,6 +47,11 @@ bindkey '^e' end-of-line
 bindkey '^b' backward-word
 bindkey '^f' forward-word
 
+# Don't try to glob with zsh so you can do
+# stuff like ga *foo* and correctly have
+# git add the right stuff
+alias git='noglob git'
+
 alias cda='cd ~/Areas'
 alias cdd='cd ~/Desktop'
 alias ccat='bat -pp'
