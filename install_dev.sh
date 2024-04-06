@@ -54,6 +54,7 @@ brew install clamav
 brew install mailsy
 brew install wifi-password
 brew install qrencode
+brew install dust
 brew install --cask insomnia
 brew install hasura-cli
 brew install hashicorp/tap/terraform
