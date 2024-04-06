@@ -18,7 +18,7 @@ brew install fd
 brew install jq
 brew install fx
 brew install bat
-brew install exa
+brew install eza
 brew install cloc
 brew install zoxide
 brew install ffmpeg
