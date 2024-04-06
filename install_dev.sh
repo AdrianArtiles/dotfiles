@@ -16,6 +16,7 @@ brew install fzf
 brew install ripgrep
 brew install fd
 brew install jq
+brew install yq
 brew install fx
 brew install bat
 brew install eza
