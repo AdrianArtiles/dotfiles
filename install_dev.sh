@@ -11,7 +11,7 @@ brew install zsh-history-substring-search
 brew install go
 brew install tree
 brew install watch
-brew install gpg
+brew install gnupg
 brew install fzf
 brew install ripgrep
 brew install fd
