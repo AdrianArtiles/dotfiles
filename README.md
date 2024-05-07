@@ -23,6 +23,7 @@ These steps set up a brand new mac out of the box.
 - Install [prezto](https://github.com/sorin-ionescu/prezto).
   - update `.zshrc` to replace entries in `~/.zprezto/runcoms/zpreztorc`
 - Install [LazyVim](https://github.com/LazyVim/LazyVim).
+- Install [tmux config](https://github.com/gpakosz/.tmux)
 - Sync keepass vault (using Strongbox).
 - Add Google account to computer (add to settings -> Internet Accounts).
 - Create ssh key ([instructions](https://help.github.com/articles/generating-ssh-keys/)).
