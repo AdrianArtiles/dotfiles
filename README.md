@@ -16,14 +16,13 @@ These steps set up a brand new mac out of the box.
 - Open/setup Xcode
 - Run the [Thoughtbot setup script](https://github.com/thoughtbot/laptop).
 - Clone this repo to root with `git clone https://github.com/AdrianArtiles/computer ~/computer`
-- Symlink `.zshrc`, `.gitconfig`, and `.default-npm-packages` to `~/`.
-  - can run `for file in .zshrc .gitconfig .default-npm-packages; do ln -s ~/computer/$file ~/; done`
+- Symlink `.zshrc`, `.gitconfig`, `.wezterm.lua`, and `.default-npm-packages` to `~/`.
+  - can run `for file in .zshrc .gitconfig .wezterm.lua .default-npm-packages; do ln -s ~/computer/$file ~/; done`
 - Install user apps and such by running `sh install_user.sh`.
 - Install dev apps and such by running `sh install_dev.sh`.
 - Install [prezto](https://github.com/sorin-ionescu/prezto).
   - update `.zshrc` to replace entries in `~/.zprezto/runcoms/zpreztorc`
 - Install [LazyVim](https://github.com/LazyVim/LazyVim).
-- Configure iTerm: new tabs open in same directory as last session, font is installed nerdfont, unlimited scrollback
 - Sync keepass vault (using Strongbox).
 - Add Google account to computer (add to settings -> Internet Accounts).
 - Create ssh key ([instructions](https://help.github.com/articles/generating-ssh-keys/)).
