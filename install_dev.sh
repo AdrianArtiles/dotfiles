@@ -39,12 +39,15 @@ brew install rsync
 brew install rclone
 
 # Additional Tools
+brew install --cask wezterm
+# brew install --cask alacritty
+# brew install --cask kitty
 # brew install pjproject
 brew install speedtest_cli
 brew install --cask visual-studio-code
 brew install --cask charles
 brew install mitmproxy
-brew install http-server
+# brew install http-server # using http-serve from prezto instead
 brew install --cask ngrok
 brew install --cask redisinsight
 brew install --cask font-jetbrains-mono-nerd-font
@@ -58,6 +61,9 @@ brew install dust
 brew install --cask insomnia
 brew install hasura-cli
 brew install hashicorp/tap/terraform
+brew install gitleaks
+brew install neofetch
+brew install broot
 
 # Vendors and Platforms
 brew install gh
@@ -65,6 +71,7 @@ brew install --cask docker
 brew install --cask google-cloud-sdk
 brew install awscli
 brew install CrunchyData/brew/cb
+brew install tursodatabase/tap/turso
 brew install rover
 brew install stripe/stripe-cli/stripe
 brew install railway
