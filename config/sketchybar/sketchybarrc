@@ -1,0 +1,225 @@
+#!/usr/bin/env bash
+
+source "$CONFIG_DIR/variables.sh"
+
+SCRIPT_DIR="$CONFIG_DIR/scripts"
+
+# Base
+sketchybar --bar \
+  color="$TRANSPARENT" \
+  border_color="$WHITE" \
+  position=top \
+  y_offset=0 \
+  height=49 \
+  border_width=0 \
+  margin=-0 \
+  corner_radius=0 \
+  padding_left=12 \
+  padding_right=12 \
+  topmost=off \
+  sticky=on \
+  notch_width=245 \
+  font_smoothing=off \
+  shadow=off
+
+
+
+# Defaults
+sketchybar --default \
+  updates=when_shown \
+  update_freq=0 \
+  icon.font="$FONT:Regular:14.0" \
+  icon.color="$WHITE" \
+  icon.padding_left="$ITEM_PADDING" \
+  icon.padding_right="$ITEM_PADDING" \
+  label.font="$FONT:Regular:12.0" \
+  label.color="$WHITE" \
+  label.padding_left="$ITEM_PADDING" \
+  label.padding_right="$ITEM_PADDING" \
+  background.height=26 \
+  background.border_width=1 \
+  background.border_color="$WHITE" \
+  background.corner_radius=8 \
+  background.padding_left=0 \
+  background.padding_right=0
+
+
+# Events
+sketchybar \
+  --add event yabai_loaded              \
+  --add event yabai_window_created      \
+  --add event yabai_window_moved        \
+  --add event yabai_window_focused      \
+  --add event yabai_window_resized      \
+  --add event yabai_application_visible
+
+
+
+
+
+
+
+# Left Spaces
+for i in $(seq 1 6);
+do
+  sketchybar --add space space.$i left                                              \
+             --set       space.$i space=$i                                          \
+             --set       space.$i icon=$i                                           \
+             --set       space.$i script="$SCRIPT_DIR/space.sh"                     \
+             --set       space.$i padding_right="$ITEM_MARGIN"                      \
+             --set       space.$i icon.font="$FONT:Regular:9.0"                     \
+             --set       space.$i icon.color="$GRAY"                                \
+             --set       space.$i icon.highlight_color="$WHITE"                     \
+             --set       space.$i icon.y_offset=5                                   \
+             --set       space.$i icon.padding_left=5                               \
+             --set       space.$i icon.padding_right=5                              \
+             --set       space.$i label.font="sketchybar-app-font:Regular:12.0"     \
+             --set       space.$i label.color="$GRAY"                               \
+             --set       space.$i label.highlight_color="$WHITE"                    \
+             --set       space.$i label.y_offset=-2                                 \
+             --set       space.$i label.padding_right=8                             \
+             --set       space.$i background.color="$BACKGROUND_COLOR"              \
+             --set       space.$i background.border_color="$TRANSPARENT"            \
+             --set       space.$i background.corner_radius=8                        \
+             --subscribe space.$i mouse.clicked                                     \
+                                  space_change yabai_loaded \
+                                  space_windows_change yabai_window_created yabai_application_visible
+done
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Left Front App
+sketchybar --add item  front_app left              \
+           --set       front_app script="sketchybar --set front_app drawing=true label=\"\$INFO\" icon.background.image=\"app.\$INFO\"" \
+           --set       front_app drawing=false \
+           --set       front_app padding_left=16 \
+           --set       front_app icon.background.drawing=on \
+           --set       front_app label.font="$FONT:Regular:12.0" \
+           --subscribe front_app front_app_switched
+
+
+
+
+           # --set      message click_script="open ~/message.txt" \
+           # --set      message click_script="wezterm start -- vim ~/message.txt" \
+sketchybar --add item message e \
+           --set      message update_freq=1 \
+           --set      message script="$SCRIPT_DIR/message.sh" \
+           --set      message click_script="open ~/message.txt" \
+           --set      message label="" \
+           --set      message label.padding_right="$BACKGROUND_MARGIN" \
+           --set      message background.color="$TRANSPARENT" \
+           --set      message background.border_color="$TRANSPARENT"
+
+
+
+
+
+
+
+# Right Calendar
+# CALENDAR=
+# CLOCK=
+sketchybar --add item calendar right \
+           --set      calendar update_freq=1 \
+           --set      calendar script="sketchybar --set calendar icon=\"\$(date '+%a %b %-d')\" label=\"\$(date '+%-I:%M:%S')\"" \
+           --set      calendar icon="$CALENDAR Loading..." \
+           --set      calendar icon.font="$FONT:Regular:12.0" \
+           --set      calendar icon.color="$WHITE" \
+           --set      calendar icon.padding_left="$BACKGROUND_MARGIN" \
+           --set      calendar icon.padding_right=5 \
+           --set      calendar label="$CLOCK Loading..." \
+           --set      calendar label.font="$FONT:Regular:12.0" \
+           --set      calendar label.color="$WHITE" \
+           --set      calendar label.padding_right="$BACKGROUND_MARGIN" \
+           --set      calendar label.width=88 \
+           --set      calendar label.align=right \
+           --set      calendar background.color="$BACKGROUND_COLOR" \
+           --set      calendar background.border_color="$TRANSPARENT"
+
+
+
+
+
+
+
+# Right Battery
+sketchybar --add item  battery right \
+           --set       battery update_freq=120 \
+           --set       battery script="$SCRIPT_DIR/battery.sh" \
+           --set       battery padding_right="$ITEM_MARGIN" \
+           --set       battery padding_left="$ITEM_MARGIN" \
+           --set       battery icon.font="$FONT:Regular:16.0" \
+           --set       battery icon.y_offset=0 \
+           --set       battery label.font="$FONT:Regular:12.0" \
+           --set       battery label.y_offset=0 \
+           --set       battery icon.padding_left="$BACKGROUND_MARGIN" \
+           --set       battery label.padding_right="$BACKGROUND_MARGIN" \
+           --set       battery background.color="$BACKGROUND_COLOR" \
+           --set       battery background.border_color="$TRANSPARENT" \
+           --subscribe battery power_source_change system_woke
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Right Volume
+sketchybar --add item    volume right          \
+           --set         volume update_freq=0 \
+           --set         volume script="$SCRIPT_DIR/volume.sh" \
+           --set         volume icon="󱄡" \
+           --set         volume icon.font="$FONT:Regular:16.0" \
+           --set         volume icon.color="$WHITE" \
+           --set         volume icon.padding_left="$BACKGROUND_MARGIN" \
+           --set         volume label='??%' \
+           --set         volume label.font="$FONT:Regular:12.0" \
+           --set         volume label.color="$WHITE" \
+           --set         volume label.padding_right="$BACKGROUND_MARGIN" \
+           --set         volume background.color=$BACKGROUND_COLOR \
+           --set         volume background.border_color="$TRANSPARENT" \
+           --subscribe   volume volume_change
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+sketchybar --hotload on
+sketchybar --update
+
+echo "> sketchybar configuation loaded"
