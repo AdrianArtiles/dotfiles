@@ -10,12 +10,12 @@ BATTERY_0=
 BATTERY_CHARGING=󰂄
 
 
-# HEALTH=$GREEN
-# NORMAL=$ORANGE
-# DANGER=$RED
-HEALTH=$WHITE
-NORMAL=$WHITE
+HEALTH=$GREEN
+NORMAL=$ORANGE
 DANGER=$RED
+# HEALTH=$WHITE
+# NORMAL=$WHITE
+# DANGER=$RED
 
 
 update_battery() {
@@ -54,7 +54,7 @@ update_battery() {
       ;;
   esac
 
-  [[ "$charging" != '' ]] && icon="$BATTERY_CHARGING"
+  [[ "$charging" != '' ]] && icon="$BATTERY_CHARGING" && color=$WHITE
 
   sketchybar --set "$NAME" icon="$icon" icon.color="$color" label="$percentage%" label.color="$color"
 }
