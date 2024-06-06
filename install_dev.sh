@@ -32,13 +32,22 @@ brew install midnight-commander
 brew install htop
 brew install tldr
 brew install jesseduffield/lazygit/lazygit
+brew install jesseduffield/lazydocker/lazydocker
 brew install gnu-sed
 brew install moreutils
 brew install restic
 brew install rsync
 brew install rclone
+brew install git-lfs
 
 # Additional Tools
+brew install koekeishiya/formulae/yabai
+# brew install koekeishiya/formulae/skhd
+# brew install --cask amethyst
+# brew install --cask ubersicht
+brew install FelixKratz/formulae/sketchybar
+curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/v2.0.19/sketchybar-app-font.ttf -o $HOME/Library/Fonts/sketchybar-app-font.ttf
+# brew services start felixkratz/formulae/sketchybar
 brew install --cask wezterm
 # brew install --cask alacritty
 # brew install --cask kitty
@@ -64,10 +73,15 @@ brew install hashicorp/tap/terraform
 brew install gitleaks
 brew install neofetch
 brew install broot
+brew install ranger
+brew install trash
+# brew install dog
+# brew install doggo
 
 # Vendors and Platforms
 brew install gh
 brew install --cask docker
+brew install --cask orbstack
 brew install --cask google-cloud-sdk
 brew install awscli
 brew install CrunchyData/brew/cb
