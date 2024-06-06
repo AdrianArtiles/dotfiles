@@ -55,7 +55,7 @@ alias git='noglob git'
 alias cda='cd ~/Areas'
 alias cdd='cd ~/Desktop'
 alias ccat='bat -pp'
-alias nscheck='host -t NS -W 2'
+# alias nscheck='host -t NS -W 2'
 alias random_words='shuf -n 10 ~/computer/local/words.txt'
 # alias mc='source /opt/homebrew/Cellar/midnight-commander/4.8.31/libexec/mc/mc-wrapper.sh'
 alias lg='lazygit'
@@ -63,6 +63,8 @@ alias le='eza --all --group-directories-first --header --long'
 alias '??'='gh copilot suggest -t shell'
 alias 'git?'='gh copilot suggest -t git'
 alias 'explain'='gh copilot explain'
+alias tat="tmux attach -t "
+alias tns="tmux new -s "
 source $HOME/computer/local/misc.zsh
 
 mkdir -p ~/computer/local
@@ -75,7 +77,25 @@ chpwd() {
   le
 }
 
+export nscheck() {
+ host -t NS -W 2 $1
+}
+
+# custom fzf + zoxide function to easily jump to frequently or recently used directories
+zf() {
+  cd $(zoxide query --list --score | fzf --height 40% --layout reverse --info inline --border --preview "eza --all --group-directories-first --header --long --no-user --no-permissions --color=always {2}" --no-sort | awk '{print $2}')
+}
+
 # custom adig command
+_dig() {
+  local domain=$1;
+  local type=$2;
+
+  dig "$domain" -t "$type" \
+    | sed -n '/;; ANSWER SECTION/,/^$/p' \
+    | sed '1d' \
+    | sed '/^$/d';
+}
 adig() {
   local domain=$1;
   local types;
