@@ -26,6 +26,7 @@ set expandtab
 augroup markdown
     autocmd!
     autocmd FileType markdown setlocal shiftwidth=2 tabstop=2
+    autocmd ColorScheme retrobox hi Normal guibg=NONE ctermbg=NONE
 augroup END
 
 " This makes vim act like all other editors, buffers can
@@ -137,13 +138,13 @@ au FocusGained,BufEnter * :checktime
 
 
 
-if (has("nvim"))
-  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-endif
+"if (has("nvim"))
+"  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+"endif
 if (has("termguicolors"))
   set termguicolors
 endif
 
 syntax on
 colorscheme retrobox
-
+set background=dark
