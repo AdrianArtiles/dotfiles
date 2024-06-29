@@ -36,8 +36,8 @@ eval "$(zoxide init zsh)"
 fpath=(${ASDF_DIR}/completions $fpath)
 source $(brew --prefix asdf)/libexec/asdf.sh
 
-export EDITOR='nvim'
-export VISUAL='nvim'
+export EDITOR='vim'
+export VISUAL='vim'
 export PAGER='less'
 export GPG_TTY=`tty`
 
@@ -83,7 +83,7 @@ export nscheck() {
 
 # custom fzf + zoxide function to easily jump to frequently or recently used directories
 zf() {
-  cd $(zoxide query --list --score | fzf --height 40% --layout reverse --info inline --border --preview "eza --all --group-directories-first --header --long --no-user --no-permissions --color=always {2}" --no-sort | awk '{print $2}')
+  cd "$(zoxide query --list --score | fzf --height 40% --layout reverse --info inline --border --preview "eza --all --group-directories-first --header --long --no-user --no-permissions --color=always {2}" --no-sort | awk '{print $2}')"
 }
 
 # custom adig command
@@ -109,4 +109,56 @@ adig() {
 # custom whois check
 wicheck() {
   whois $1 | grep --color=never -i 'no match\|not found'
+}
+
+yy() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
+if [[ -n "$YAZI_ID" ]]; then
+  echo "Yazi ID: $YAZI_ID"
+	function _yazi_cd() {
+		ya pub "$YAZI_ID" dds-cd --str "$PWD"
+	}
+	add-zsh-hook zshexit _yazi_cd
+fi
+
+# Usage: m <mark name>
+m() {
+  if [ -z "$1" ]; then
+    echo "You must provide a mark"
+    return 1
+  fi
+
+  if [ ! -d ~/.local/state/bookmarks ]; then
+    mkdir -p ~/.local/state/bookmarks
+  fi
+
+  echo "$1: $PWD"
+  echo $PWD >| ~/.local/state/bookmarks/$1
+}
+
+# Usage: j <mark name>
+j() {
+  if [ -z "$1" ]; then
+    echo "You must provide a mark"
+    return 1
+  fi
+  if [ ! -f ~/.local/state/bookmarks/$1 ]; then
+    echo "mark $1 does not exist"
+    return 1
+  fi
+  dir=$(cat ~/.local/state/bookmarks/$1)
+  echo $dir
+  cd $dir
+}
+
+marks() {
+  for bookmark in ~/.local/state/bookmarks/*; do
+    echo "$(basename $bookmark): $(cat $bookmark)"
+  done
 }
