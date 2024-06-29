@@ -34,9 +34,14 @@ brew install --cask contexts
 brew install --cask microsoft-outlook
 brew install --cask microsoft-excel
 brew install --cask arc
+# brew install --cask alt-tab
+# brew install --cask hammerspoon
+brew install --cask obs
+brew install --cask gimp
 # brew install --cask macdown
 brew install --cask veracrypt
 brew install rclone
+# brew install keith/formulae/reminders-cli
 brew install --cask steam
 brew install --cask electrum
 brew install --cask imageoptim
@@ -48,3 +53,4 @@ brew install --cask mark-text
 brew install --cask hyperkey
 brew install --cask drawio
 brew install --cask keka
+# brew install --cask cyberduck

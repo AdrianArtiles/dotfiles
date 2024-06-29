@@ -27,7 +27,7 @@ brew install shred
 brew install ipfs
 brew install p7zip
 brew install imagemagick
-brew install midnight-commander
+# brew install midnight-commander
 # brew install btop
 brew install htop
 brew install tldr
@@ -46,7 +46,7 @@ brew install koekeishiya/formulae/yabai
 # brew install --cask amethyst
 # brew install --cask ubersicht
 brew install FelixKratz/formulae/sketchybar
-curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/v2.0.19/sketchybar-app-font.ttf -o $HOME/Library/Fonts/sketchybar-app-font.ttf
+curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/v2.0.19/sketchybar-app-font.ttf -o "$HOME/Library/Fonts/sketchybar-app-font.ttf"
 # brew services start felixkratz/formulae/sketchybar
 brew install --cask wezterm
 # brew install --cask alacritty
@@ -64,7 +64,6 @@ code --install-extension vscodevim.vim
 brew install --cask cursor
 brew install clamav
 brew install mailsy
-brew install wifi-password
 brew install qrencode
 brew install dust
 brew install --cask insomnia
@@ -74,9 +73,19 @@ brew install gitleaks
 brew install neofetch
 brew install broot
 brew install ranger
+brew install yazi
+brew install ffmpegthumbnailer # trialing yazı dependency
+brew install unar # trialing yazı dependency
+brew install poppler # trialing yazı dependency
+brew install exiftool # trialing yazı dependency
 brew install trash
 # brew install dog
 # brew install doggo
+brew install poppler # trialing
+brew install ncdu # trialing
+brew install duf # trialing
+brew install peco # trialing
+brew install colordiff # trialing
 
 # Vendors and Platforms
 brew install gh
