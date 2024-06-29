@@ -65,6 +65,7 @@ alias 'git?'='gh copilot suggest -t git'
 alias 'explain'='gh copilot explain'
 alias tat="tmux attach -t "
 alias tns="tmux new -s "
+alias gitd="git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME"
 source $HOME/computer/local/misc.zsh
 
 mkdir -p ~/computer/local
