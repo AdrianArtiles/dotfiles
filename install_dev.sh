@@ -70,7 +70,7 @@ brew install --cask insomnia
 brew install hasura-cli
 brew install hashicorp/tap/terraform
 brew install gitleaks
-brew install neofetch
+brew install fastfetch
 brew install broot
 brew install ranger
 brew install yazi
