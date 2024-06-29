@@ -1,0 +1,24 @@
+[[manager.prepend_keymap]]
+on   = [ "<C-s>" ]
+run  = 'shell "export S=\"$@\"; $SHELL" --block --confirm'
+desc = "Open shell here"
+
+[[manager.prepend_keymap]]
+on   = [ "d" ]
+run  = 'shell "trash -F \"$@\""'
+desc = "Move the files to the trash V2"
+
+[[manager.prepend_keymap]]
+on  = [ "g", "d" ]
+run = "cd ~/Desktop"
+desc = "Go to Desktop"
+
+[[manager.prepend_keymap]]
+on  = [ "K" ]
+run = "plugin --sync parent-arrow --args=-1"
+desc = "Change parent directory"
+
+[[manager.prepend_keymap]]
+on  = [ "J" ]
+run = "plugin --sync parent-arrow --args=1"
+desc = "Change parent directory"

@@ -1,0 +1,9 @@
+[opener]
+peak = [
+  { run = 'qlmanage -p "$@"', desc = "Quick Look" }
+]
+
+[open]
+prepend_rules = [
+  { name = "*", use = [ "peak", "open", "edit", "reveal", "extract" ] },
+]
