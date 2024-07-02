@@ -54,3 +54,6 @@ brew install --cask hyperkey
 brew install --cask drawio
 brew install --cask keka
 # brew install --cask cyberduck
+# brew install --cask orion
+# brew install --cask inkscape
+# brew install --cask lulu
