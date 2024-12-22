@@ -5,7 +5,7 @@ desc = "Open shell here"
 
 [[manager.prepend_keymap]]
 on   = [ "d" ]
-run  = 'shell "trash -F \"$@\""'
+run  = 'shell "trash -F \"$@\"" --interactive'
 desc = "Move the files to the trash V2"
 
 [[manager.prepend_keymap]]
