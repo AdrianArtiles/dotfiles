@@ -148,3 +148,13 @@ endif
 syntax on
 colorscheme retrobox
 set background=dark
+
+augroup encrypted
+  autocmd!
+  autocmd BufReadPre,FileReadPre *.gpg set viminfo=
+  autocmd BufReadPre,FileReadPre *.gpg set noswapfile noundofile nobackup
+  autocmd BufReadPost,FileReadPost *.gpg :%!gpg --decrypt 2> /dev/null
+  " autocmd BufWritePre *.gpg :%!gpg -ae --default-recipient-self
+  autocmd BufWritePre,FileWritePre *.gpg :%!gpg --symmetric 2> /dev/null
+  autocmd BufWritePost,FileWritePost *.gpg u
+augroup END
