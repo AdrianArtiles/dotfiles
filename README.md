@@ -16,8 +16,7 @@ These steps set up a brand new mac out of the box.
 - Open/setup Xcode
 - Run the [Thoughtbot setup script](https://github.com/thoughtbot/laptop).
 - Clone this repo to root with `git clone https://github.com/AdrianArtiles/computer ~/`
-- Install user apps by running `sh install_user.sh`.
-- Install dev apps by running `sh install_dev.sh`.
+- Install apps and tools by running `brew bundle --global`.
 - Install [prezto](https://github.com/sorin-ionescu/prezto).
   - update `.zshrc` to replace entries in `~/.zprezto/runcoms/zpreztorc`
 - Install [LazyVim](https://github.com/LazyVim/LazyVim).
