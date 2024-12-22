@@ -98,9 +98,9 @@ brew install mailsy
 brew install qrencode
 brew install gitleaks
 brew install fastfetch
-brew install ffmpegthumbnailer # trialing yazı dependency
-brew install poppler # trialing yazı dependency
-brew install exiftool # trialing yazı dependency
+brew install ffmpegthumbnailer # trialing yazi dependency
+brew install poppler # trialing yazi dependency
+brew install exiftool # trialing yazi dependency
 # brew install dog
 # brew install doggo
 
