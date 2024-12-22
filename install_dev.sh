@@ -21,6 +21,7 @@ brew install fd
 brew install jq
 brew install yq
 brew install fx
+brew install htmlq # trialing
 brew install bat
 brew install eza
 brew install cloc
@@ -29,6 +30,17 @@ brew install gnu-sed
 brew install moreutils
 brew install tldr
 brew install colordiff # trialing
+brew install difftastic
+brew install miller
+brew install saulpw/vd/visidata
+# brew install xsv
+# brew install sc-im
+# brew install csvtk
+brew install mise
+# curl -s https://cht.sh/:cht.sh | sudo tee /usr/local/bin/cht.sh && sudo chmod +x /usr/local/bin/cht.sh # trialing
+brew install navi
+brew install bruno # api client - trialing
+brew install wget
 
 # File Managers
 brew install yazi
@@ -51,12 +63,11 @@ brew install trash
 brew install p7zip
 
 # UI
-brew install koekeishiya/formulae/yabai
+# brew install koekeishiya/formulae/yabai
 # brew install koekeishiya/formulae/skhd
 # brew install --cask amethyst
 # brew install --cask ubersicht
 brew install FelixKratz/formulae/sketchybar
-curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/v2.0.19/sketchybar-app-font.ttf -o "$HOME/Library/Fonts/sketchybar-app-font.ttf"
 # brew services start felixkratz/formulae/sketchybar
 # brew services start yabai
 # brew services start sketchybar
@@ -65,6 +76,7 @@ curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/v2.0.
 # Untitled
 brew install pnpm
 brew install oven-sh/bun/bun
+brew install deno
 brew install htop
 # brew install btop
 brew install jesseduffield/lazygit/lazygit
@@ -79,7 +91,6 @@ brew install ffmpeg
 brew install imagemagick
 # brew install pjproject
 brew install --cask visual-studio-code
-code --install-extension vscodevim.vim
 brew install --cask redisinsight
 brew install --cask cursor
 brew install --cask insomnia
@@ -92,7 +103,6 @@ brew install poppler # trialing yazı dependency
 brew install exiftool # trialing yazı dependency
 # brew install dog
 # brew install doggo
-brew install peco # trialing
 
 # OSS
 brew install hasura-cli
@@ -100,6 +110,7 @@ brew install hashicorp/tap/terraform
 brew install --cask docker
 brew install --cask orbstack
 brew install tursodatabase/tap/turso
+# brew install --cask dbeaver-community
 
 # Vendors and Platforms
 brew install gh
