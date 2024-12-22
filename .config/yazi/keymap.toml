@@ -15,10 +15,10 @@ desc = "Go to Desktop"
 
 [[manager.prepend_keymap]]
 on  = [ "K" ]
-run = "plugin --sync parent-arrow --args=-1"
+run = "plugin parent-arrow --args=-1"
 desc = "Change parent directory"
 
 [[manager.prepend_keymap]]
 on  = [ "J" ]
-run = "plugin --sync parent-arrow --args=1"
+run = "plugin parent-arrow --args=1"
 desc = "Change parent directory"
