@@ -247,7 +247,7 @@ additional_setup() {
   echo "Downloading additional files"
   curl -s https://raw.githubusercontent.com/bitcoin/bips/master/bip-0039/english.txt -o ~/.local/share/dictionaries/words.txt
   curl -s http://cheat.sh/:list -o ~/.local/share/dictionaries/cheat.sh.txt
-  curl -s https://github.com/kvndrsslr/sketchybar-app-font/releases/download/v2.0.19/sketchybar-app-font.ttf -o ~/Library/Fonts/sketchybar-app-font.ttf
+  curl -s -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/v2.0.19/sketchybar-app-font.ttf -o ~/Library/Fonts/sketchybar-app-font.ttf
 
   echo "Additional setup complete"
 }
