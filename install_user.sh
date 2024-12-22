@@ -1,9 +1,5 @@
 #!/bin/sh
 
-mkdir ~/Areas
-mkdir ~/Resources
-mkdir ~/Archives
-
 brew tap caskroom/cask
 
 brew install --cask google-chrome
@@ -33,9 +29,10 @@ brew install --cask obsidian
 brew install --cask contexts
 brew install --cask microsoft-outlook
 brew install --cask microsoft-excel
-brew install --cask arc
+# brew install --cask microsoft-edge
+# brew install --cask arc
 # brew install --cask alt-tab
-# brew install --cask hammerspoon
+brew install --cask hammerspoon
 brew install --cask obs
 brew install --cask gimp
 # brew install --cask macdown
