@@ -81,9 +81,10 @@ do
              --set       space.$i background.color="$BACKGROUND_COLOR"              \
              --set       space.$i background.border_color="$TRANSPARENT"            \
              --set       space.$i background.corner_radius=8                        \
-             --subscribe space.$i mouse.clicked                                     \
-                                  space_change yabai_loaded \
-                                  space_windows_change yabai_window_created yabai_application_visible
+             --subscribe space.$i space_change space_windows_change                 
+             # --subscribe space.$i mouse.clicked                                     \
+             #                      space_change yabai_loaded \
+             #                      space_windows_change yabai_window_created yabai_application_visible front_app_switched
 done
 
 
