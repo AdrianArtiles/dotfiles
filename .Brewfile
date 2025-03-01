@@ -1,185 +1,300 @@
 
-# User section
 
-cask "google-chrome"
-cask "google-earth-pro"
-cask "google-drive"
-# cask "dropbox"
-cask "iterm2"
+
+# -----------------------------------------------------------------------------
+# BROWSERS & INTERNET
+# -----------------------------------------------------------------------------
+
 cask "firefox"
-cask "slack"
-cask "zoom"
-cask "spotify"
-cask "whatsapp"
-cask "telegram"
-cask "sublime-text"
-cask "iina"
-cask "vlc"
-cask "docker"
-cask "discord"
+cask "google-chrome"
 cask "tor-browser"
 cask "tunnelblick"
-cask "setapp"
-cask "calibre"
-cask "audacity"
-cask "raycast"
-cask "linear-linear"
-cask "obsidian"
-# cask "contexts"
-cask "microsoft-outlook"
-cask "microsoft-excel"
-# cask "microsoft-edge"
-# cask "arc"
-# cask "alt-tab"
-cask "hammerspoon"
-cask "obs"
-cask "gimp"
-# cask "macdown"
-cask "veracrypt"
-# brew install keith/formulae/reminders-cli"
-cask "steam"
-cask "electrum"
-cask "imageoptim"
-# cask "omnidisksweeper"
-# cask "shadow"
-# cask "bisq"
-# cask "karabiner-elements"
-cask "hyperkey"
-cask "drawio"
-cask "keka"
-# cask "fantastical"
-# cask "cyberduck"
-# cask "orion"
-# cask "inkscape"
-# cask "lulu"
 cask "vivaldi"
 # cask "brave-browser"
+# cask "microsoft-edge"
+# cask "orion"
 
 
 
-# Developer section
+# -----------------------------------------------------------------------------
+# PRODUCTIVITY & OFFICE
+# -----------------------------------------------------------------------------
 
-# Main
-brew "neovim"
+cask "calibre"
+cask "drawio"
+cask "linear-linear"
+cask "microsoft-excel"
+cask "microsoft-outlook"
+cask "obsidian"
+cask "raycast"
+cask "setapp"
+cask "sublime-text"
+# cask "alt-tab"
+# cask "contexts"
+# cask "fantastical"
+# cask "macdown"
+
+
+
+# -----------------------------------------------------------------------------
+# COMMUNICATION & SOCIAL
+# -----------------------------------------------------------------------------
+
+cask "discord"
+cask "slack"
+cask "telegram"
+cask "whatsapp"
+cask "zoom"
+
+
+
+# -----------------------------------------------------------------------------
+# MEDIA & ENTERTAINMENT
+# -----------------------------------------------------------------------------
+
+cask "audacity"
+cask "gimp"
+cask "google-earth-pro"
+cask "iina"
+cask "obs"
+cask "spotify"
+cask "steam"
+cask "vlc"
+# cask "inkscape"
+# cask "shadow"
+
+
+
+# -----------------------------------------------------------------------------
+# FILE MANAGEMENT & STORAGE
+# -----------------------------------------------------------------------------
+
+cask "electrum"
+cask "google-drive"
+cask "imageoptim"
+cask "keka"
+cask "veracrypt"
+brew "ipfs"
+# cask "bisq"
+# cask "cyberduck"
+# cask "dropbox"
+# cask "omnidisksweeper"
+
+
+
+# -----------------------------------------------------------------------------
+# SYSTEM UTILITIES
+# -----------------------------------------------------------------------------
+
+cask "hammerspoon"
+cask "hyperkey"
+# cask "karabiner-elements"
+# cask "lulu"
+
+
+
+# -----------------------------------------------------------------------------
+# DEVELOPMENT - TERMINALS & SHELLS
+# -----------------------------------------------------------------------------
+
 cask "ghostty"
+cask "iterm2"
 cask "wezterm"
 # cask "alacritty"
 # cask "kitty"
-cask "font-jetbrains-mono-nerd-font"
 
-# Main 2
-brew "zsh-history-substring-search"
-# brew "tree"
-brew "watch"
-brew "gnupg"
-brew "fzf"
-brew "ripgrep"
-brew "fd"
-brew "jq"
-brew "yq"
-brew "fx"
-# brew "htmlq" # trialing
-brew "bat"
-brew "eza"
-brew "cloc"
-brew "zoxide"
-brew "gnu-sed"
-brew "moreutils"
-brew "tldr"
-brew "colordiff" # trialing
-brew "difftastic"
-brew "miller"
-brew "saulpw/vd/visidata"
-# brew "xsv"
-# brew "sc-im"
-# brew "csvtk"
-brew "mise"
-brew "navi"
+
+
+# -----------------------------------------------------------------------------
+# DEVELOPMENT - EDITORS & IDEs
+# -----------------------------------------------------------------------------
+
+brew "neovim"
+cask "cursor"
+cask "visual-studio-code"
+
+
+
+# -----------------------------------------------------------------------------
+# DEVELOPMENT - DATABASES & APIS
+# -----------------------------------------------------------------------------
+
 cask "bruno" # api client - trialing
 cask "insomnia" # api client - trialing
-brew "wget"
+cask "redisinsight"
+# cask "dbeaver-community"
 
-# File Managers
+
+
+# -----------------------------------------------------------------------------
+# DEVELOPMENT - CONTAINERS & VIRTUALIZATION
+# -----------------------------------------------------------------------------
+
+cask "docker"
+cask "orbstack"
+brew "lazydocker"
+
+
+
+# -----------------------------------------------------------------------------
+# DEVELOPMENT - VERSION CONTROL
+# -----------------------------------------------------------------------------
+
+brew "gh"
+brew "git-lfs"
+brew "gitleaks"
+brew "jesseduffield/lazygit/lazygit"
+
+
+
+# -----------------------------------------------------------------------------
+# DEVELOPMENT - LANGUAGES & RUNTIMES
+# -----------------------------------------------------------------------------
+
+brew "deno"
+brew "mise"
+brew "asdf"
+brew "oven-sh/bun/bun"
+brew "pnpm"
+
+
+
+# -----------------------------------------------------------------------------
+# DEVELOPMENT - CLOUD & INFRASTRUCTURE
+# -----------------------------------------------------------------------------
+
+brew "ariga/tap/atlas"
+brew "hasura-cli"
+brew "tfenv" # terraform version manager
+# brew "awscli"
+# brew "CrunchyData/brew/cb"
+# brew "hashicorp/tap/terraform"
+# brew "rover"
+# brew "stripe/stripe-cli/stripe"
+# cask "google-cloud-sdk"
+
+
+
+# -----------------------------------------------------------------------------
+# DEVELOPMENT - FONTS
+# -----------------------------------------------------------------------------
+
+cask "font-jetbrains-mono-nerd-font"
+
+
+# -----------------------------------------------------------------------------
+# CLI TOOLS - CORE UTILITIES
+# -----------------------------------------------------------------------------
+
+brew "bat"
+brew "colordiff" # trialing
+brew "difftastic"
+brew "eza"
+brew "fd"
+brew "fzf"
+brew "gnu-sed"
+brew "moreutils"
+brew "ripgrep"
+brew "tldr"
+brew "watch"
+brew "wget"
+brew "zoxide"
+brew "zsh-history-substring-search"
+brew "gnupg"
+# brew "tree"
+
+
+
+# -----------------------------------------------------------------------------
+# CLI TOOLS - FILE MANAGEMENT
+# -----------------------------------------------------------------------------
+
+brew "age"
+brew "clamav"
+brew "cloc"
+brew "duf" # disk usage - trialing
+brew "dust" # disk usage - trialing
+brew "ncdu" # disk usage - trialing
+brew "p7zip"
+brew "rclone"
+brew "restic"
+brew "rsync"
+brew "unar" # unarchive - trialing
 brew "yazi"
 # brew "midnight-commander"
 # brew "broot"
 # brew "ranger"
-
-# File Tools
-brew "restic"
-brew "rclone"
-brew "rsync"
-brew "rclone"
-brew "ipfs"
 # brew "shred"
-brew "clamav"
-brew "dust" # disk usage - trialing
-brew "ncdu" # disk usage - trialing
-brew "duf" # disk usage - trialing
-brew "unar" # unarchive - trialing
-brew "p7zip"
-brew "age"
 
-# UI
-# brew "koekeishiya/formulae/yabai"
-# brew "koekeishiya/formulae/skhd"
-# cask "amethyst"
-# cask "ubersicht"
-brew "FelixKratz/formulae/sketchybar"
-# brew services start felixkratz/formulae/sketchybar
-# brew services start yabai
-# brew services start sketchybar
-# brew "stats"
 
-# Untitled
-brew "pnpm"
-brew "oven-sh/bun/bun"
-brew "deno"
+
+# -----------------------------------------------------------------------------
+# CLI TOOLS - DATA PROCESSING
+# -----------------------------------------------------------------------------
+
+brew "fx"
+brew "jq"
+brew "miller"
+brew "saulpw/vd/visidata"
+brew "yq"
+# brew "csvtk"
+# brew "htmlq"
+# brew "sc-im"
+# brew "xsv"
+
+
+
+# -----------------------------------------------------------------------------
+# CLI TOOLS - MONITORING & PERFORMANCE
+# -----------------------------------------------------------------------------
+
 brew "btop"
-brew "jesseduffield/lazygit/lazygit"
-brew "lazydocker"
-# brew "jesseduffield/lazydocker/lazydocker"
-cask "charles"
-brew "mitmproxy"
-# brew "http-server # using http-serve from prezto instead"
-cask "ngrok"
-brew "git-lfs"
-# brew "speedtest-cli" # can use `networkQuality -v` instead
-brew "ffmpeg"
-brew "imagemagick"
-# brew "pjproject"
-cask "visual-studio-code"
-cask "redisinsight"
-cask "cursor"
-brew "mailsy"
-brew "qrencode"
-brew "gitleaks"
 brew "fastfetch"
-brew "pam-reattach"
-brew "watchman"
-brew "ffmpegthumbnailer" # trialing yazi dependency"
-brew "poppler" # trialing yazi dependency"
-brew "exiftool" # trialing yazi dependency"
 # brew "dog"
 # brew "doggo"
-# brew "ncspot" # trialing spotify client
-# brew "spotify_player" # trialing spotify client
-# brew "uv" # trialing
+# brew "speedtest-cli" # can use `networkQuality -v` instead
 
-# OSS
-brew "hasura-cli"
-brew "ariga/tap/atlas"
-# brew "hashicorp/tap/terraform"
-brew "tfenv" # terraform version manager
-cask "docker"
-cask "orbstack"
-# brew "tursodatabase/tap/turso"
-# cask "dbeaver-community"
 
-# Vendors and Platforms
-brew "gh"
-# cask "google-cloud-sdk"
-# brew "awscli"
-# brew "CrunchyData/brew/cb"
-# brew "rover"
-# brew "stripe/stripe-cli/stripe"
+
+# -----------------------------------------------------------------------------
+# CLI TOOLS - MEDIA & CONVERSION
+# -----------------------------------------------------------------------------
+
+brew "exiftool" # trialing yazi dependency"
+brew "ffmpeg"
+brew "ffmpegthumbnailer" # trialing yazi dependency"
+brew "imagemagick"
+brew "poppler" # trialing yazi dependency"
+brew "qrencode"
+
+
+
+# -----------------------------------------------------------------------------
+# DEVELOPMENT - NETWORKING & DEBUGGING
+# -----------------------------------------------------------------------------
+
+brew "mailsy"
+brew "mitmproxy"
+brew "navi"
+cask "ngrok"
+brew "pam-reattach"
+brew "watchman"
+cask "charles"
+# brew "http-server # using http-serve from prezto instead"
+# brew "pjproject"
+
+
+
+# -----------------------------------------------------------------------------
+# UI CUSTOMIZATION
+# -----------------------------------------------------------------------------
+
+brew "FelixKratz/formulae/sketchybar"
+# brew "koekeishiya/formulae/skhd"
+# brew "koekeishiya/formulae/yabai"
+# brew "stats"
+# cask "amethyst"
+# cask "ubersicht"
+
+
+
