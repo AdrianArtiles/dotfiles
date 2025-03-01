@@ -1,9 +1,20 @@
-[opener]
-peak = [
-  { run = 'qlmanage -p "$@"', desc = "Quick Look" }
-]
+# [opener]
+# peak = [
+#   { run = 'qlmanage -p "$@"', desc = "Quick Look" }
+# ]
+# extract = [
+# 	{ run = 'ya pub extract --list "$@"', desc = "Extract here", for = "unix" },
+# ]
 
-[open]
-prepend_rules = [
-  { name = "*", use = [ "peak", "open", "edit", "reveal", "extract" ] },
-]
+# [open]
+# prepend_rules = [
+#   { name = "*", use = [ "peak", "open", "edit", "reveal", "extract" ] },
+# ]
+
+[[plugin.prepend_previewers]]
+mime = "application/gzip"
+run  = "lsar"
+
+[[plugin.prepend_previewers]]
+mime = "application/xz"
+run  = "lsar"
