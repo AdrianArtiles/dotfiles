@@ -148,6 +148,10 @@ endif
 syntax on
 colorscheme retrobox
 set background=dark
+let output = system("defaults read -g AppleInterfaceStyle")
+if v:shell_error != 0
+  set background=light
+endif
 
 augroup encrypted
   autocmd!
