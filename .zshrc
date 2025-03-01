@@ -98,7 +98,7 @@ yy() {
 if [[ -n "$YAZI_ID" ]]; then
   echo "Yazi ID: $YAZI_ID"
 	function _yazi_cd() {
-		ya pub "$YAZI_ID" dds-cd --str "$PWD"
+		ya emit cd "$PWD"
 	}
 	add-zsh-hook zshexit _yazi_cd
 fi
