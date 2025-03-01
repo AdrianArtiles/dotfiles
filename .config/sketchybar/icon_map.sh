@@ -589,6 +589,9 @@ function __icon_map() {
         # icon_result=":wezterm:"
         icon_result=":iterm:"
         ;;
+   "Ghostty")
+        icon_result=":iterm:"
+        ;;
    "WhatsApp" | "‎WhatsApp")
         icon_result=":whats_app:"
         ;;
