@@ -66,6 +66,8 @@ alias 'git?'='gh copilot suggest -t git'
 alias explain='gh copilot explain'
 # Shortcuts
 alias cdd='cd ~/Desktop'
+alias lg='lazygit'
+alias tararchive='tar -cJvf archive.tar.xz'
 
 # advanced ls when in new directory
 chpwd() {
