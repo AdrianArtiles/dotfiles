@@ -1,0 +1,23 @@
+# theme = dark:GitHub Dark,light:Github
+theme = dark:GitHub-Dark-High-Contrast,light:GitHub-Light-High-Contrast
+# theme = dark:catppuccin-mocha,light:catppuccin-latte
+# theme = dark:tokyonight_night,light:tokyonight-day
+# minimum-contrast = 1.1
+
+macos-titlebar-style = hidden
+# window-decoration = false
+macos-non-native-fullscreen = true
+copy-on-select = true
+
+window-padding-x = 0
+window-padding-y = 0
+# font-size = 12
+font-feature = -calt
+font-feature = -liga
+font-feature = -dlig
+
+keybind = global:super+\=toggle_quick_terminal
+quick-terminal-animation-duration = 0.0
+quick-terminal-autohide = false
+
+keybind = global:shift+f3=new_window
