@@ -23,7 +23,7 @@ update_space_type() {
 }
 
 update_space_windows() {
-  [[ "$SENDER" != 'space_windows_change' ]] && echo '> error SENDER in `update_space_windows`' && return 1
+  [[ "$SENDER" != 'space_windows_change' ]] && echo "> error SENDER in 'update_space_windows'" && return 0
 
   # NOTE: INFO is a JSON string.
   # { "space": 1, "apps": { "Linear": 1, "Chromium": 1, "iTerm": 1 } }
@@ -42,18 +42,13 @@ update_space_windows() {
              --set space.$space label="$icon_strip"
 }
 
-
 case "$SENDER" in
-  'forced'|'skhd_space_type_changed'|'space_change'|'yabai_loaded')
-    update_space_type
+  'forced'|'space_change')
+    update_space_type && sketchybar --trigger space_windows_change
     ;;
   'space_windows_change')
     update_space_windows
     ;;
-  'yabai_window_created'|'yabai_application_visible')
-    [[ "$SELECTED" == 'true' ]] && sketchybar --trigger space_windows_change
-    ;;
   *)
-    echo "> error invalid sender: $SENDER" in $0
     ;;
 esac
