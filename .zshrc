@@ -38,6 +38,7 @@ eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
 eval "$(navi widget zsh)"
 fpath=(${ASDF_DIR}/completions $fpath)
+export PATH="$HOME/.local/bin:$PATH"
 source $(brew --prefix asdf)/libexec/asdf.sh
 
 export EDITOR='vim'
