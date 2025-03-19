@@ -155,7 +155,7 @@ brew "deno"
 brew "mise"
 brew "asdf"
 brew "oven-sh/bun/bun"
-brew "pnpm"
+# brew "pnpm" # consider using corepack
 
 
 
