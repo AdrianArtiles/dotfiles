@@ -69,6 +69,7 @@ alias explain='gh copilot explain'
 alias cdd='cd ~/Desktop'
 alias lg='lazygit'
 alias tararchive='tar -cJvf archive.tar.xz'
+alias vd='visidata --theme=asciimono'
 
 # advanced ls when in new directory
 chpwd() {
