@@ -132,7 +132,7 @@ cask "redisinsight"
 
 cask "docker"
 cask "orbstack"
-brew "jesseduffield/lazydocker/lazydocker"
+brew "lazydocker"
 
 
 
