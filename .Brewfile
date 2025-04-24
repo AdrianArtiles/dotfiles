@@ -153,7 +153,7 @@ brew "jesseduffield/lazygit/lazygit"
 
 brew "deno"
 brew "mise"
-brew "asdf"
+# brew "asdf"
 brew "oven-sh/bun/bun"
 # brew "pnpm" # consider using corepack
 

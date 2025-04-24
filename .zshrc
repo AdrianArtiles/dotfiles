@@ -30,16 +30,15 @@ zstyle ':prezto:module:history-substring-search' fuzzy 'yes'
 zstyle ':prezto:module:prompt' theme 'pure'
 source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 
-autoload -U compinit
-compinit
-
 eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
 eval "$(navi widget zsh)"
-fpath=(${ASDF_DIR}/completions $fpath)
+eval "$(mise activate zsh)"
 export PATH="$HOME/.local/bin:$PATH"
-source $(brew --prefix asdf)/libexec/asdf.sh
+
+autoload -U compinit
+compinit
 
 export EDITOR='vim'
 export VISUAL='vim'
@@ -115,6 +114,10 @@ zf() {
 
 
 
+# Load a .env file into the current shell
+load_env() {
+  set -o allexport && source .env && set +o allexport
+}
 
 
 
