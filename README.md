@@ -2,13 +2,13 @@
 
 This is how I set up a new computer/manage my current computer.
 
-As I change what I have installed, tools I use, configurations I set, etc., I update this repo. This keeps my environment organized and deterministic. Usually.
+I generally keep this up to date. After an initial assessment, if I trial or adopt something it usually will be added here.
 
 Since I always try to avoid reinventing the wheel and instead like to find best-in-breed resources, this setup relies heavily on other tried-and-true setups, configurations, and conventions, with my tools and small configurations added on.
 
 These steps set up a brand new mac out of the box.
 
-# The Steps
+## The Steps
 
 - Map caps lock key to escape (go to keyboard settings -> modifier keys).
 - Install used applications from the Mac App store
@@ -26,10 +26,10 @@ These steps set up a brand new mac out of the box.
 - Add ssh key where needed (GitHub and so on).
 - Set Mac defaults using commands from [MacOS Defaults](https://macos-defaults.com/).
 - Install favorited applications from Setapp.
-  - namely: CleanShot, TablePlus, Dash, DevUtils, CloudMounter, Numi
+  - namely: CleanShot, TablePlus, DevUtils, CloudMounter, Numi
 - Setup Raycast, Hyperkey.
 - Change computer name (under settings -> general).
 
-# Misc
+## Misc
 
 Place customizations in `~/.zshrc.local` which is sourced at the end of `~/.zshrc`.
