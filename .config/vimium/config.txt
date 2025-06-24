@@ -1,0 +1,49 @@
+unmap d
+unmap u
+map <c-d> scrollPageDown
+map <c-u> scrollPageUp
+unmap j
+unmap k
+
+# remove default tab actions
+unmap J
+unmap gT
+unmap K
+unmap gt
+unmap x
+unmap X
+
+# remove default history
+unmap H
+unmap L
+
+map <c-f> LinkHints.activateModeWithQueue
+map <c-6> visitPreviousTab
+
+# remove remaining defaults
+unmap h
+unmap l
+unmap zH
+unmap zL
+unmap r
+unmap R
+unmap p
+unmap P
+unmap o
+unmap O
+unmap b
+unmap B
+unmap ge
+unmap gE
+unmap g0
+unmap g$
+unmap ^
+unmap g0
+unmap g$
+unmap <a-p>
+unmap <a-m>
+unmap W
+unmap zi
+unmap zo
+unmap z0
+unmap gs
