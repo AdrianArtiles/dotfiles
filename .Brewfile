@@ -115,6 +115,7 @@ brew "neovim"
 cask "cursor"
 cask "visual-studio-code"
 
+brew "sst/tap/opencode"
 
 
 # -----------------------------------------------------------------------------
@@ -166,6 +167,7 @@ brew "oven-sh/bun/bun"
 # -----------------------------------------------------------------------------
 
 brew "ariga/tap/atlas"
+brew "siderolabs/tap/talosctl"
 brew "hasura-cli"
 brew "tfenv" # terraform version manager
 # brew "awscli"
