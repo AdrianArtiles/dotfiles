@@ -14,11 +14,9 @@ These steps set up a brand new mac out of the box.
 - Install used applications from the Mac App store
   - namely: Xcode, 1Blocker
 - Open/setup Xcode
-- Run the [Thoughtbot setup script](https://github.com/thoughtbot/laptop).
 - Clone this repo to root with `git clone https://github.com/AdrianArtiles/computer ~/`
+- run `run_setup`
 - Install apps and tools by running `brew bundle --global`.
-- Install [prezto](https://github.com/sorin-ionescu/prezto).
-  - update `.zshrc` to replace entries in `~/.zprezto/runcoms/zpreztorc`
 - Install [LazyVim](https://github.com/LazyVim/LazyVim).
 - Install [tmux config](https://github.com/gpakosz/.tmux)
 - Add Google account to computer (add to settings -> Internet Accounts).
@@ -33,3 +31,5 @@ These steps set up a brand new mac out of the box.
 ## Misc
 
 Place customizations in `~/.zshrc.local` which is sourced at the end of `~/.zshrc`.
+
+These dotfiles used to depend on [Thoughtbot setup script](https://github.com/thoughtbot/laptop) and [prezto](https://github.com/sorin-ionescu/prezto) which can still serve as references.

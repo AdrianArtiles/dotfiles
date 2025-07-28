@@ -1,90 +1,198 @@
+#!/bin/zsh
+# ========================================
+# ZSH Configuration
+# ========================================
 
-zstyle ':prezto:load' pmodule \
-  'environment' \
-  'editor' \
-  'history' \
-  'directory' \
-  'spectrum' \
-  'utility' \
-  'archive' \
-  'git' \
-  'osx' \
-  'ssh' \
-  'completion' \
-  'syntax-highlighting' \
-  'history-substring-search' \
-  'autosuggestions' \
-  'prompt'
-zstyle ':prezto:module:syntax-highlighting' highlighters \
-  'main' \
-  'brackets' \
-  'pattern' \
-  'line' \
-  'cursor' \
-  'root'
-zstyle ':prezto:*:*' color 'yes'
-zstyle ':prezto:*:*' case-sensitive 'no'
-zstyle ':prezto:module:editor' key-bindings 'vi'
-zstyle ':prezto:module:history-substring-search' unique 'yes'
-zstyle ':prezto:module:history-substring-search' fuzzy 'yes'
-zstyle ':prezto:module:prompt' theme 'pure'
-source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+# ========================================
+# Shell Options
+# ========================================
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
-eval "$(fzf --zsh)"
-eval "$(zoxide init zsh)"
-eval "$(navi widget zsh)"
-eval "$(mise activate zsh)"
-export PATH="$HOME/.local/bin:$PATH"
+# Completion options
 
-autoload -U compinit
-compinit
+setopt EXTENDED_GLOB        # Needed for file modification glob modifiers with compinit.
+unsetopt FLOW_CONTROL       # Disable start/stop characters in shell editor.
+setopt COMPLETE_IN_WORD     # Complete from both ends of a word.
+setopt ALWAYS_TO_END        # Move cursor to the end of a completed word.
+setopt AUTO_MENU            # Show completion menu on a successive tab press.
 
+# General shell options
+setopt INTERACTIVE_COMMENTS # Allow comments in interactive shells
+unsetopt CLOBBER            # Prevent overwriting files with > redirect
+setopt AUTO_CD              # Change directory without typing cd
+
+# ========================================
+# History Configuration
+# ========================================
+
+# export HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/zsh/history"
+export HISTSIZE=10000
+export SAVEHIST=10000
+setopt EXTENDED_HISTORY      # Record timestamp of command in HISTFILE
+setopt SHARE_HISTORY         # Share history between all sessions
+setopt HIST_IGNORE_DUPS      # Don't record entry if duplicate of previous
+setopt HIST_IGNORE_SPACE     # Don't record entry starting with space
+setopt HIST_VERIFY           # Show command with history expansion before running
+
+# ========================================
+# Environment Variables
+# ========================================
+
+# Editor and pager configuration
 export EDITOR='vim'
 export VISUAL='vim'
 export PAGER='less'
 export GPG_TTY=`tty`
 
-bindkey -v
+# Path configuration
+export PATH="$HOME/.local/bin:$PATH"
+
+# Tool initializations
+eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(fzf --zsh)"
+eval "$(zoxide init zsh)"
+eval "$(navi widget zsh)"
+eval "$(mise activate zsh)"
+
+# ========================================
+# Completion System
+# ========================================
+
+# Initialize completions
+autoload -Uz compinit
+# Only regenerate compdump once a day for performance
+if [[ -n ${ZDOTDIR}/.zcompdump(#qN.mh+24) ]]; then
+  compinit
+else
+  compinit -C
+fi
+
+# Completion styles - Defaults
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*:default' list-prompt '%S%M matches%s'
+
+# Use caching to make completion for commands such as dpkg and apt usable
+zstyle ':completion::complete:*' use-cache on
+zstyle ':completion::complete:*' cache-path "${XDG_CACHE_HOME:-$HOME/.cache}/zsh/zcompcache"
+
+# Group matches and describe
+zstyle ':completion:*:*:*:*:*' menu select
+zstyle ':completion:*:matches' group 'yes'
+zstyle ':completion:*:options' description 'yes'
+zstyle ':completion:*:options' auto-description '%d'
+zstyle ':completion:*:corrections' format ' %F{green}-- %d (errors: %e) --%f'
+zstyle ':completion:*:descriptions' format ' %F{yellow}-- %d --%f'
+zstyle ':completion:*:messages' format ' %F{purple} -- %d --%f'
+zstyle ':completion:*:warnings' format ' %F{red}-- no matches found --%f'
+zstyle ':completion:*' format ' %F{yellow}-- %d --%f'
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*' verbose yes
+
+# Fuzzy match mistyped completions
+zstyle ':completion:*' completer _complete _match _approximate
+zstyle ':completion:*:match:*' original only
+zstyle ':completion:*:approximate:*' max-errors 1 numeric
+# Increase the number of errors based on the length of the typed word
+# Cap at 7 max-errors to avoid hanging
+zstyle -e ':completion:*:approximate:*' max-errors 'reply=($((($#PREFIX+$#SUFFIX)/3>7?7:($#PREFIX+$#SUFFIX)/3))numeric)'
+
+# Don't complete unavailable commands
+zstyle ':completion:*:functions' ignored-patterns '(_*|pre(cmd|exec))'
+
+# Array completion element sorting
+zstyle ':completion:*:*:-subscript-:*' tag-order indexes parameters
+
+# Directory completion
+zstyle ':completion:*:*:cd:*' tag-order local-directories directory-stack path-directories
+zstyle ':completion:*:*:cd:*:directory-stack' menu yes select
+zstyle ':completion:*:-tilde-:*' group-order 'named-directories' 'path-directories' 'users' 'expand'
+zstyle ':completion:*' squeeze-slashes true
+
+# History completion
+zstyle ':completion:*:history-words' stop yes
+zstyle ':completion:*:history-words' remove-all-dups yes
+zstyle ':completion:*:history-words' list false
+zstyle ':completion:*:history-words' menu yes
+
+# Environment variables completion
+zstyle ':completion::*:(-command-|export):*' fake-parameters ${${${_comps[(I)-value-*]#*,}%%,*}:#-*-}
+
+# ========================================
+# Plugins
+# ========================================
+
+# Load plugins with error handling
+[[ -f /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]] && \
+  source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+[[ -f /opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-search.zsh ]] && \
+  source /opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+
+# Load syntax highlighting last for optimal performance
+[[ -f /opt/homebrew/opt/zsh-fast-syntax-highlighting/share/zsh-fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh ]] && \
+  source /opt/homebrew/opt/zsh-fast-syntax-highlighting/share/zsh-fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+
+# ========================================
+# Prompt Configuration
+# ========================================
+
+setopt PROMPT_SUBST
+PROMPT='
+%F{green}%*%f %F{blue}%~%f
+%% '
+
+# Alternative prompt with git info (commented out)
+# PROMPT='
+# %F{green}%*%f %F{blue}%~%f %F{red}${vcs_info_msg_0_}%f
+# %% '
+
+# ========================================
+# Key Bindings
+# ========================================
+
+bindkey -v                   # Use vi mode
 bindkey '^a' beginning-of-line
 bindkey '^e' end-of-line
 bindkey '^b' backward-word
 bindkey '^f' forward-word
 
-# Remove zsh globbing for git so commands like `git add *` work as expected
-alias git='noglob git'
-# Manage dotfiles with a bare git repository
+# ========================================
+# Aliases
+# ========================================
+
+# Git aliases
+alias git='noglob git'       # Remove zsh globbing for git
 alias gitd="git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME"
 alias editd="cd ~; GIT_DIR=~/.dotfiles.git $EDITOR"
-# Use bat as a better cat
-alias ccat='bat -pp'
-# Use exa as a better ls
+alias 'git?'='gh copilot suggest -t git'
+
+# File operations
+alias ccat='bat -pp'         # Use bat as a better cat
 alias ll='eza --all --group-directories-first --header --long'
+
 # Copilot aliases
 alias '??'='gh copilot suggest -t shell'
-alias 'git?'='gh copilot suggest -t git'
 alias explain='gh copilot explain'
+
 # Shortcuts
 alias cdd='cd ~/Desktop'
 alias lg='lazygit'
 alias tararchive='tar -cJvf archive.tar.xz'
 alias vd='visidata --theme=asciimono'
+alias aic='aichat --session'
+alias http-serve='python -m http.server'
 
-# advanced ls when in new directory
+# ========================================
+# Functions
+# ========================================
+
+# Auto-ls when changing directories
 chpwd() {
   ll
 }
 
-
-
-
-
-
-
-
-
-
-# Navigation and file tools
+# ----------------------------------------
+# Navigation and File Tools
+# ----------------------------------------
 
 # yy - yazi wrapper to change directory to the yazi cwd
 yy() {
@@ -95,6 +203,8 @@ yy() {
 	fi
 	rm -f -- "$tmp"
 }
+
+# Yazi integration for nested sessions
 if [[ -n "$YAZI_ID" ]]; then
   echo "Yazi ID: $YAZI_ID"
 	function _yazi_cd() {
@@ -108,74 +218,60 @@ zf() {
   cd "$(zoxide query --list --score | fzf --height 40% --layout reverse --info inline --border --preview "eza --all --group-directories-first --header --long --no-user --no-permissions --color=always {2}" --no-sort | awk '{print $2}')"
 }
 
-
-
-
-
-
-
 # Load a .env file into the current shell
 load_env() {
   set -o allexport && source .env && set +o allexport
 }
 
-
-
-
-# Marking and jumping to directories
+# ----------------------------------------
+# Bookmarking System
+# ----------------------------------------
 
 # m - mark a directory to easily jump to it later with j
-# Usage: m <mark name>
 m() {
   if [ -z "$1" ]; then
     echo "You must provide a mark"
     return 1
   fi
 
-  if [ ! -d ~/.local/state/bookmarks ]; then
-    mkdir -p ~/.local/state/bookmarks
+  local bookmarks_dir="${XDG_STATE_HOME:-$HOME/.local/state}/bookmarks"
+  if [ ! -d "$bookmarks_dir" ]; then
+    mkdir -p "$bookmarks_dir"
   fi
 
   echo "$1: $PWD"
-  echo $PWD >| ~/.local/state/bookmarks/$1
+  echo $PWD >| "$bookmarks_dir/$1"
 }
 
 # j - jump to a marked directory
-# Usage: j <mark name>
 j() {
   if [ -z "$1" ]; then
     echo "You must provide a mark"
     return 1
   fi
-  if [ ! -f ~/.local/state/bookmarks/$1 ]; then
+  local bookmarks_dir="${XDG_STATE_HOME:-$HOME/.local/state}/bookmarks"
+  if [ ! -f "$bookmarks_dir/$1" ]; then
     echo "mark $1 does not exist"
     return 1
   fi
-  dir=$(cat ~/.local/state/bookmarks/$1)
+  dir=$(cat "$bookmarks_dir/$1")
   echo $dir
   cd $dir
 }
 
 # marks - list all the marks
 marks() {
-  for bookmark in ~/.local/state/bookmarks/*; do
-    echo "$(basename $bookmark): $(cat $bookmark)"
+  local bookmarks_dir="${XDG_STATE_HOME:-$HOME/.local/state}/bookmarks"
+  for bookmark in "$bookmarks_dir"/*; do
+    [[ -f "$bookmark" ]] && echo "$(basename "$bookmark"): $(cat "$bookmark")"
   done
 }
 
-
-
-
-
-
-
-
-
-
-# Tmux tools
+# ----------------------------------------
+# Tmux Tools
+# ----------------------------------------
 
 # tms - tmux session manager to create or attach to a session
-# Usage: tms <session name>
 tms() {
   if [ -z "$1" ]; then
     echo "Please provide a session name"
@@ -189,6 +285,8 @@ tms() {
     tmux new -s "$1"
   fi
 }
+
+# Completion for tms function
 _tms() {
   local sessions
   sessions=($(tmux list-sessions 2>/dev/null | cut -d: -f1))
@@ -196,19 +294,11 @@ _tms() {
 }
 compdef _tms tms
 
-
-
-
-
-
-
-
-
-
-# DNS tools
+# ----------------------------------------
+# DNS Tools
+# ----------------------------------------
 
 # adig - a simple dig wrapper to get main DNS records
-# Usage: adig <domain>
 adig() {
   local domain=$1;
   local types;
@@ -223,28 +313,25 @@ adig() {
 }
 
 # nameserver_check - check the nameservers for a domain
-# Usage: nameserver_check <domain>
 nameserver_check() {
   host -t NS -W 2 $1
 }
 
 # whois_check - query whois for a domain and check if it's available
-# Usage: whois_check <domain>
 # Note: only shows domains that are not found
 whois_check() {
   whois $1 | grep --color=never -i 'no match\|not found'
 }
 
+# ========================================
+# Setup and Initialization
+# ========================================
 
+# Setup function for new environments
+run_setup() {
+  echo "Installing homebrew"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-
-
-
-
-
-
-
-additional_setup() {
   echo "Setting up additional directories"
   mkdir -p ~/Areas
   mkdir -p ~/Resources
@@ -258,10 +345,17 @@ additional_setup() {
 
   echo "Additional setup complete"
 }
+
+# Check if setup is needed
 if [ ! -f ~/.local/share/dictionaries/words.txt ]; then
-  echo "Please run additional_setup"
+  echo "Please run run_setup"
 fi
 
+# ========================================
+# Local Configuration
+# ========================================
+
+# Source local configuration if it exists
 if [ -f ~/.zshrc.local ]; then
   source ~/.zshrc.local
 fi

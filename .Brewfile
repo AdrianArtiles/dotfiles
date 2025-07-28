@@ -10,6 +10,7 @@ cask "google-chrome"
 cask "tor-browser"
 cask "tunnelblick"
 cask "vivaldi"
+cask "qutebrowser"
 # cask "brave-browser"
 # cask "microsoft-edge"
 # cask "orion"
@@ -62,6 +63,7 @@ cask "obs"
 cask "spotify"
 cask "steam"
 cask "vlc"
+cask "insta360-studio"
 # cask "inkscape"
 # cask "shadow"
 
@@ -99,11 +101,13 @@ cask "hyperkey"
 # DEVELOPMENT - TERMINALS & SHELLS
 # -----------------------------------------------------------------------------
 
+brew "zsh"
 cask "ghostty"
 cask "iterm2"
-cask "wezterm"
+# cask "wezterm"
 # cask "alacritty"
 # cask "kitty"
+# brew "starship"
 
 
 
@@ -111,10 +115,11 @@ cask "wezterm"
 # DEVELOPMENT - EDITORS & IDEs
 # -----------------------------------------------------------------------------
 
+brew "vim"
 brew "neovim"
+brew "tmux"
 cask "cursor"
 cask "visual-studio-code"
-
 brew "sst/tap/opencode"
 
 
@@ -122,8 +127,8 @@ brew "sst/tap/opencode"
 # DEVELOPMENT - DATABASES & APIS
 # -----------------------------------------------------------------------------
 
-cask "bruno" # api client - trialing
-cask "insomnia" # api client - trialing
+# cask "bruno" # api client - trialing
+# cask "insomnia" # api client - trialing
 cask "redisinsight"
 # cask "dbeaver-community"
 
@@ -143,6 +148,7 @@ brew "lazydocker"
 # DEVELOPMENT - VERSION CONTROL
 # -----------------------------------------------------------------------------
 
+brew "git"
 brew "gh"
 brew "git-lfs"
 brew "gitleaks"
@@ -168,7 +174,6 @@ brew "oven-sh/bun/bun"
 
 brew "ariga/tap/atlas"
 brew "siderolabs/tap/talosctl"
-brew "hasura-cli"
 brew "tfenv" # terraform version manager
 # brew "awscli"
 # brew "CrunchyData/brew/cb"
@@ -184,12 +189,15 @@ brew "tfenv" # terraform version manager
 # -----------------------------------------------------------------------------
 
 cask "font-jetbrains-mono-nerd-font"
+cask "sf-symbols"
 
 
 # -----------------------------------------------------------------------------
 # CLI TOOLS - CORE UTILITIES
 # -----------------------------------------------------------------------------
 
+brew "coreutils"
+brew "openssl@3"
 brew "bat"
 brew "colordiff" # trialing
 brew "difftastic"
@@ -203,10 +211,12 @@ brew "tldr"
 brew "watch"
 brew "wget"
 brew "zoxide"
+brew "zsh-autosuggestions"
 brew "zsh-history-substring-search"
+brew "zsh-fast-syntax-highlighting"
 brew "gnupg"
 # brew "tree"
-
+brew "aichat"
 
 
 # -----------------------------------------------------------------------------
