@@ -19,6 +19,7 @@ setopt AUTO_MENU            # Show completion menu on a successive tab press.
 setopt INTERACTIVE_COMMENTS # Allow comments in interactive shells
 unsetopt CLOBBER            # Prevent overwriting files with > redirect
 setopt AUTO_CD              # Change directory without typing cd
+setopt RM_STAR_WAIT         # 10 second wait before rm * - safety feature
 
 # ========================================
 # History Configuration
