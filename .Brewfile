@@ -73,12 +73,12 @@ cask "insta360-studio"
 # FILE MANAGEMENT & STORAGE
 # -----------------------------------------------------------------------------
 
-cask "electrum"
 cask "google-drive"
 cask "imageoptim"
 cask "keka"
 cask "veracrypt"
 brew "ipfs"
+# cask "electrum"
 # cask "bisq"
 # cask "cyberduck"
 # cask "dropbox"
@@ -127,8 +127,6 @@ brew "sst/tap/opencode"
 # DEVELOPMENT - DATABASES & APIS
 # -----------------------------------------------------------------------------
 
-# cask "bruno" # api client - trialing
-# cask "insomnia" # api client - trialing
 cask "redisinsight"
 # cask "dbeaver-community"
 
@@ -217,6 +215,7 @@ brew "zsh-fast-syntax-highlighting"
 brew "gnupg"
 # brew "tree"
 brew "aichat"
+# brew "docutils"
 
 
 # -----------------------------------------------------------------------------
@@ -235,9 +234,6 @@ brew "restic"
 brew "rsync"
 brew "unar" # unarchive - trialing
 brew "yazi"
-# brew "midnight-commander"
-# brew "broot"
-# brew "ranger"
 # brew "shred"
 
 
