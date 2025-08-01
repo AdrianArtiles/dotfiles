@@ -18,6 +18,14 @@ return {
     },
   },
   {
+    "folke/noice.nvim",
+    opts = {
+      presets = {
+        lsp_doc_border = true,
+      },
+    },
+  },
+  {
     "mikavilpas/yazi.nvim",
     event = "VeryLazy",
     dependencies = {
