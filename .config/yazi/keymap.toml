@@ -1,41 +1,41 @@
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on   = [ "<C-s>" ]
 run  = 'shell "export S=\"$@\"; $SHELL" --block --confirm'
 desc = "Open shell here"
 
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on   = [ "d" ]
 run  = 'shell "trash \"$@\"" --interactive'
 desc = "Move the files to the trash V2"
 
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on  = [ "g", "d" ]
 run = "cd ~/Desktop"
 desc = "Go to Desktop"
 
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on  = [ "K" ]
 run = "plugin parent-arrow -1"
 desc = "Change parent directory"
 
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on  = [ "J" ]
 run = "plugin parent-arrow 1"
 desc = "Change parent directory"
 
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on  = [ "A", "g" ]
 # run = 'shell "tar cvzf archive.tar.gz $(echo $@ | sed \"s| $PWD/|\"|g\")" --interactive'
 run = 'shell "ysf \"$@\" | xargs tar cvzf archive.tar.gz" --interactive'
 desc = "Archive Gzip"
 
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on  = [ "A", "x" ]
 # run = 'shell "tar cvJf archive.tar.xz $(echo $@ | sed \"s|$PWD/||g\")" --interactive'
 run = 'shell "ysf \"$@\" | xargs tar cvJf archive.tar.xz" --interactive'
 desc = "Archive xz"
 
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on  = [ "A", "7" ]
 # run = 'shell "7z a archive.7z $(echo $@ | sed \"s|$PWD/||g\")" --interactive'
 run = 'shell "ysf \"$@\" | xargs 7za a archive.7z" --interactive'
