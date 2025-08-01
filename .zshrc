@@ -136,10 +136,13 @@ zstyle ':completion::*:(-command-|export):*' fake-parameters ${${${_comps[(I)-va
 # Prompt Configuration
 # ========================================
 
+# autoload -U promptinit
+# promptinit
+
 setopt PROMPT_SUBST
 PROMPT='
 %F{green}%*%f %F{blue}%~%f
-%% '
+$ '
 
 # Alternative prompt with git info (commented out)
 # PROMPT='
