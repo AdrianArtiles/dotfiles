@@ -14,7 +14,9 @@ These steps set up a brand new mac out of the box.
 - Install used applications from the Mac App store
   - namely: Xcode, 1Blocker
 - Open/setup Xcode
-- Clone this repo to root with `git clone https://github.com/AdrianArtiles/computer ~/`
+- Clone this repo to root with `git clone https://github.com/AdrianArtiles/dotfiles ~/`
+  - move the git directory to `~/.dotfiles.git`
+  - edit with `cd ~; GIT_DIR=~/.dotfiles.git nvim .`
 - run `run_setup`
 - Install apps and tools by running `brew bundle --global`.
 - Install [LazyVim](https://github.com/LazyVim/LazyVim).
