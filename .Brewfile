@@ -127,6 +127,8 @@ brew "sst/tap/opencode"
 # DEVELOPMENT - DATABASES & APIS
 # -----------------------------------------------------------------------------
 
+brew "postgresql"
+brew "redis"
 cask "redisinsight"
 # cask "dbeaver-community"
 
