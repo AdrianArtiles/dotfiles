@@ -57,13 +57,13 @@ cask "zoom"
 
 cask "audacity"
 cask "gimp"
-cask "google-earth-pro"
 cask "iina"
 cask "obs"
 cask "spotify"
 cask "steam"
 cask "vlc"
 cask "insta360-studio"
+# cask "google-earth-pro"
 # cask "inkscape"
 # cask "shadow"
 
@@ -284,12 +284,12 @@ brew "qrencode"
 # -----------------------------------------------------------------------------
 
 brew "mailsy"
-brew "mitmproxy"
 brew "navi"
 cask "ngrok"
 brew "pam-reattach"
 brew "watchman"
 cask "charles"
+cask "mitmproxy"
 # brew "http-server # using http-serve from prezto instead"
 # brew "pjproject"
 
