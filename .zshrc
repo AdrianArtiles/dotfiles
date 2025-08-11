@@ -347,6 +347,13 @@ run_setup() {
   curl -s http://cheat.sh/:list -o ~/.local/share/dictionaries/cheat.sh.txt
   curl -s -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/v2.0.28/sketchybar-app-font.ttf -o ~/Library/Fonts/sketchybar-app-font.ttf
 
+  sudo tee "/etc/pam.d/sudo_local" > /dev/null << EOF
+# sudo_local: local config file which survives system update and is included for sudo
+# uncomment following line to enable Touch ID for sudo
+auth       optional       /opt/homebrew/lib/pam/pam_reattach.so
+auth       sufficient     pam_tid.so
+EOF
+
   echo "Additional setup complete"
 }
 
