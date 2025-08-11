@@ -26,8 +26,8 @@ setopt RM_STAR_WAIT         # 10 second wait before rm * - safety feature
 # ========================================
 
 # export HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/zsh/history"
-export HISTSIZE=10000
-export SAVEHIST=10000
+export HISTSIZE=1000000
+export SAVEHIST=1000000
 setopt EXTENDED_HISTORY      # Record timestamp of command in HISTFILE
 setopt SHARE_HISTORY         # Share history between all sessions
 setopt HIST_IGNORE_DUPS      # Don't record entry if duplicate of previous
