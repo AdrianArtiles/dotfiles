@@ -70,6 +70,7 @@ fi
 # Completion styles - Defaults
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*:default' list-prompt '%S%M matches%s'
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 # Use caching to make completion for commands such as dpkg and apt usable
 zstyle ':completion::complete:*' use-cache on
