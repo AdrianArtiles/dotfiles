@@ -58,6 +58,9 @@ return {
       "nvim-lua/plenary.nvim",
       "nvim-treesitter/nvim-treesitter",
     },
+    keys = {
+      { "<leader>ac", "<cmd>CodeCompanionActions<cr>", desc = "Code Companion Actions", mode = { "n", "v" } },
+    },
     config = function()
       require("codecompanion").setup({
         strategies = {
@@ -87,7 +90,4 @@ return {
       })
     end,
   },
-  {
-    },
-  }
 }
