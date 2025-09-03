@@ -26,7 +26,7 @@ These steps set up a brand new mac out of the box.
 - Add ssh key where needed (GitHub and so on).
 - Set Mac defaults using commands from [MacOS Defaults](https://macos-defaults.com/).
 - Install favorited applications from Setapp.
-  - namely: CleanShot, TablePlus, DevUtils, CloudMounter, Numi
+  - namely: CleanShot, TablePlus, DevUtils, Numi
 - Setup Raycast, Hyperkey.
 - Change computer name (under settings -> general).
 
