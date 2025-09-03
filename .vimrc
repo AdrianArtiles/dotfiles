@@ -1,5 +1,4 @@
-" NOTE: neovim is the primary text editor which is configured elsewhere, so
-" this config is only used in the occasional times vim is used instead.
+" NOTE: neovim is the primary full-feature editor, and vim is used as an alternative minimal editor
 
 set nocompatible
 
@@ -24,9 +23,10 @@ set tabstop=2
 set expandtab
 
 augroup markdown
-    autocmd!
-    autocmd FileType markdown setlocal shiftwidth=2 tabstop=2
-    autocmd ColorScheme retrobox hi Normal guibg=NONE ctermbg=NONE
+  autocmd!
+  autocmd FileType markdown highlight link markdownError None
+  " autocmd FileType markdown setlocal shiftwidth=2 tabstop=2
+  " autocmd ColorScheme retrobox hi Normal guibg=NONE ctermbg=NONE
 augroup END
 
 " This makes vim act like all other editors, buffers can
@@ -84,63 +84,11 @@ set nomodeline
 
 
 
-"nnoremap <silent> Q :bdelete<CR>
-"
-"
-"
-"
-"" ," Surround a word with "quotes"
-"map ," ysiw"
-"vmap ," c"<C-R>""<ESC>
-"
-"" ,' Surround a word with 'single quotes'
-"map ,' ysiw'
-"vmap ,' c'<C-R>"'<ESC>
-"
-"" ,) or ,( Surround a word with (parens)
-"" The difference is in whether a space is put in
-"map ,( ysiw(
-"map ,) ysiw)
-"vmap ,( c( <C-R>" )<ESC>
-"vmap ,) c(<C-R>")<ESC>
-"
-"" ,[ Surround a word with [brackets]
-"map ,] ysiw]
-"map ,[ ysiw[
-"vmap ,[ c[ <C-R>" ]<ESC>
-"vmap ,] c[<C-R>"]<ESC>
-"
-"" ,{ Surround a word with {braces}
-"map ,} ysiw}
-"map ,{ ysiw{
-"vmap ,} c{ <C-R>" }<ESC>
-"vmap ,{ c{<C-R>"}<ESC>
-"
-"map ,` ysiw`
-"
-"
-"
-"
-"" Change inside various enclosures with Cmd-" and Cmd-'
-"" The f makes it find the enclosure so you don't have
-"" to be standing inside it
-"nnoremap <M-'> f'ci'
-"nnoremap <M-"> f"ci"
-"nnoremap <M-(> f(ci(
-"nnoremap <M-)> f)ci)
-"nnoremap <M-[> f[ci[
-"nnoremap <M-]> f]ci]
-
-
-
 au FocusGained,BufEnter * :checktime
 
 
 
 
-"if (has("nvim"))
-"  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-"endif
 if (has("termguicolors"))
   set termguicolors
 endif
