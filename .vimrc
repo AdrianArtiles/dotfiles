@@ -1,27 +1,116 @@
-" NOTE: neovim is the primary full-feature editor, and vim is used as an alternative minimal editor
+" ==============================================================================
+" VIM CONFIGURATION
+" ==============================================================================
+" NOTE: Neovim is the primary full-feature editor, vim is used as minimal editor
 
 set nocompatible
 
-" ================ General Config ====================
-set number                      "Line numbers are good
-set relativenumber              "Relative line numbers are good
-set backspace=indent,eol,start  "Allow backspace in insert mode
-set history=1000                "Store lots of :cmdline history
-set showcmd                     "Show incomplete cmds down the bottom
-set showmode                    "Show current mode down the bottom
-set autoread                    "Reload files changed outside vim
-set nowrap                      "Don't wrap lines
-" set linebreak                   "Wrap lines at convenient points
+" ==============================================================================
+" GENERAL SETTINGS
+" ==============================================================================
 
-" ================ Indentation ======================
-set autoindent
-set smartindent
-set smarttab
-set shiftwidth=2
-set softtabstop=2
-set tabstop=2
-set expandtab
+" Display
+set number                      " Show line numbers
+set relativenumber              " Show relative line numbers
+set showcmd                     " Show incomplete commands
+set showmode                    " Show current mode
+set nowrap                      " Don't wrap long lines
+set laststatus=2                " Always show status line
+set ruler                       " Show cursor position
 
+" Behavior
+set backspace=indent,eol,start  " Allow backspace over everything
+set history=1000                " Keep command history
+set autoread                    " Auto-reload files changed outside vim
+set hidden                      " Allow buffers in background
+set mouse=a                     " Enable mouse support
+set scrolloff=5                 " Keep 5 lines visible above/below cursor
+set sidescrolloff=5             " Keep 5 columns visible left/right of cursor
+
+" ==============================================================================
+" INDENTATION & TABS
+" ==============================================================================
+
+set autoindent                  " Copy indent from current line
+set smartindent                 " Smart autoindenting for code
+set smarttab                    " Smart tab behavior
+set shiftwidth=2                " Spaces for autoindent
+set softtabstop=2               " Spaces for tab key
+set tabstop=2                   " Display width of tab character
+set expandtab                   " Use spaces instead of tabs
+
+" ==============================================================================
+" SEARCH SETTINGS
+" ==============================================================================
+
+set incsearch                   " Search as you type
+set hlsearch                    " Highlight search results
+set ignorecase                  " Case insensitive search
+set smartcase                   " Case sensitive if uppercase used
+
+" ==============================================================================
+" VISUAL INDICATORS
+" ==============================================================================
+
+set list listchars=tab:\ \ ,trail:·  " Show tabs and trailing spaces
+set nofoldenable                     " Don't fold by default
+
+" ==============================================================================
+" FILE HANDLING
+" ==============================================================================
+
+" Swap files
+set directory^=$HOME/.vim/tmp   " Store swap files in home directory
+
+" Backup files
+set nobackup                    " Don't create backup files
+set nowritebackup               " Don't create backup before overwriting
+
+" Performance
+set updatetime=750              " Faster update time for better UX
+
+" ==============================================================================
+" COMPLETION
+" ==============================================================================
+
+set wildmode=list:longest       " Command completion behavior
+set wildmenu                    " Enhanced command completion
+
+" ==============================================================================
+" VISUAL APPEARANCE
+" ==============================================================================
+
+" Colors and syntax
+if has("termguicolors")
+  set termguicolors
+endif
+
+syntax on
+colorscheme retrobox
+set background=dark
+
+" Adapt to system appearance (macOS)
+let output = system("defaults read -g AppleInterfaceStyle")
+if v:shell_error != 0
+  set background=light
+endif
+
+" Sign column
+set signcolumn=auto             " Show sign column when needed
+
+" ==============================================================================
+" SECURITY
+" ==============================================================================
+
+set modelines=0                 " Disable modelines
+set nomodeline                  " Don't process modelines
+set secure                      " Restrict dangerous commands
+
+" ==============================================================================
+" FILE TYPE CONFIGURATIONS
+" ==============================================================================
+
+" Markdown
 augroup markdown
   autocmd!
   autocmd FileType markdown highlight link markdownError None
@@ -29,83 +118,7 @@ augroup markdown
   " autocmd ColorScheme retrobox hi Normal guibg=NONE ctermbg=NONE
 augroup END
 
-" This makes vim act like all other editors, buffers can
-" exist in the background without being in a window.
-" http://items.sjbach.com/319/configuring-vim-right
-set hidden
-
-set mouse=a
-
-set nofoldenable        "dont fold by default
-
-" ================ Completion =======================
-set wildmode=list:longest
-set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
-
-" filetype plugin on
-" filetype indent on
-
-" Display tabs and trailing spaces visually
-set list listchars=tab:\ \ ,trail:·
-
-" set swap file directory relative to home, instead of working directory
-" be sure the directory exists
-set directory^=$HOME/.vim/tmp//
-
-" Some servers have issues with backup files, see #649
-set nobackup
-set nowritebackup
-
-" Better display for messages
-" set cmdheight=2
-
-" You will have bad experience for diagnostic messages when it's default 4000.
-set updatetime=750
-
-" don't give |ins-completion-menu| messages.
-" set shortmess+=c
-
-" always show signcolumns
-" set signcolumn=yes
-set signcolumn=auto
-
-" ================ Search ===========================
-
-set incsearch       " Find the next match as we type the search
-set hlsearch        " Highlight searches by default
-set ignorecase      " Ignore case when searching...
-set smartcase       " ...unless we type a capital
-
-" ================ Security ==========================
-set modelines=0
-set nomodeline
-set secure
-
-
-set scrolloff=5
-set sidescrolloff=5
-set laststatus=2
-set ruler
-let g:netrw_liststyle = 3
-
-
-autocmd FocusGained,BufEnter * :checktime
-
-
-
-
-if (has("termguicolors"))
-  set termguicolors
-endif
-
-syntax on
-colorscheme retrobox
-set background=dark
-let output = system("defaults read -g AppleInterfaceStyle")
-if v:shell_error != 0
-  set background=light
-endif
-
+" GPG encrypted files
 augroup encrypted
   autocmd!
   autocmd BufReadPre,FileReadPre *.gpg set viminfo=
@@ -115,3 +128,13 @@ augroup encrypted
   autocmd BufWritePre,FileWritePre *.gpg :%!gpg --symmetric 2> /dev/null
   autocmd BufWritePost,FileWritePost *.gpg u
 augroup END
+
+" ==============================================================================
+" AUTO COMMANDS
+" ==============================================================================
+
+" File explorer settings
+let g:netrw_liststyle = 3       " Tree view for netrw
+
+" Auto-reload files when focus gained
+autocmd FocusGained,BufEnter * :checktime
