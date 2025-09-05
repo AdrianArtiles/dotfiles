@@ -82,6 +82,7 @@ set modelines=0
 set nomodeline
 
 
+let g:netrw_liststyle = 3
 
 
 au FocusGained,BufEnter * :checktime
