@@ -35,8 +35,6 @@ augroup END
 set hidden
 
 set mouse=a
-set ignorecase
-set smartcase
 
 set nofoldenable        "dont fold by default
 
@@ -59,16 +57,17 @@ set nobackup
 set nowritebackup
 
 " Better display for messages
-set cmdheight=2
+" set cmdheight=2
 
 " You will have bad experience for diagnostic messages when it's default 4000.
-set updatetime=300
+set updatetime=750
 
 " don't give |ins-completion-menu| messages.
-set shortmess+=c
+" set shortmess+=c
 
 " always show signcolumns
-set signcolumn=yes
+" set signcolumn=yes
+set signcolumn=auto
 
 " ================ Search ===========================
 
@@ -80,12 +79,17 @@ set smartcase       " ...unless we type a capital
 " ================ Security ==========================
 set modelines=0
 set nomodeline
+set secure
 
 
+set scrolloff=5
+set sidescrolloff=5
+set laststatus=2
+set ruler
 let g:netrw_liststyle = 3
 
 
-au FocusGained,BufEnter * :checktime
+autocmd FocusGained,BufEnter * :checktime
 
 
 
