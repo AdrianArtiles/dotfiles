@@ -1,6 +1,6 @@
 # theme = dark:GitHub Dark,light:Github
-# theme = dark:GitHub-Dark-High-Contrast,light:GitHub-Light-High-Contrast
-theme = dark:GitHub Dark,light:GitHub-Light-Default
+theme = dark:GitHub-Dark-High-Contrast,light:GitHub-Light-High-Contrast
+# theme = dark:GitHub Dark,light:GitHub-Light-Default
 # theme = dark:catppuccin-mocha,light:catppuccin-latte
 # theme = dark:tokyonight,light:tokyonight-day
 
