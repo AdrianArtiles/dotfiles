@@ -10,6 +10,10 @@
 bind -T copy-mode-vi y send -X copy-selection
 bind s choose-tree -Zs -O name
 
+unbind C-b
+set -g prefix C-a
+# set -gu prefix2
+
 bind-key . if-shell '[ "$(tmux display-message -p "#{client_session}")" != "wip" ]' \
     'display-popup -E "tmux attach-session -t wip || tmux new-session -s wip"' \
     'detach-client'
