@@ -142,8 +142,12 @@ zstyle ':completion::*:(-command-|export):*' fake-parameters ${${${_comps[(I)-va
 
 setopt PROMPT_SUBST
 PROMPT='
-%F{green}%*%f %F{blue}%~%f
-$ '
+%F{blue}%~%f
+❯ '
+
+# PROMPT='
+# %F{green}%*%f %F{blue}%~%f
+# $ '
 
 # Alternative prompt with git info (commented out)
 # PROMPT='
