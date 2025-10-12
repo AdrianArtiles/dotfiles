@@ -1,5 +1,4 @@
 return {
-  { "AndrewRadev/splitjoin.vim" },
   {
     "zbirenbaum/copilot.lua",
     opts = {
