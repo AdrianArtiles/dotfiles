@@ -25,6 +25,20 @@ return {
     },
   },
   {
+    "folke/sidekick.nvim",
+    keys = {
+      { "<c-y>", LazyVim.cmp.map({ "ai_nes" }, "<c-y>"), mode = { "n" }, expr = true },
+    },
+    -- opts = {
+    --   cli = {
+    --     mux = {
+    --       enabled = true,
+    --       backend = "tmux",
+    --     },
+    --   },
+    -- }
+  },
+  {
     "mikavilpas/yazi.nvim",
     event = "VeryLazy",
     dependencies = {
@@ -51,42 +65,7 @@ return {
     },
   },
   {
-    "olimorris/codecompanion.nvim",
-    opts = {},
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-treesitter/nvim-treesitter",
-    },
-    keys = {
-      { "<leader>ac", "<cmd>CodeCompanionActions<cr>", desc = "Code Companion Actions", mode = { "n", "v" } },
-    },
-    config = function()
-      require("codecompanion").setup({
-        strategies = {
-          chat = {
-            adapter = "copilot",
-          },
-          inline = {
-            adapter = "copilot",
           },
         },
-        adapters = {
-          openrouter = function()
-            return require("codecompanion.adapters").extend("openai_compatible", {
-              env = {
-                url = "https://openrouter.ai/api",
-                api_key = "OPENROUTER_API_KEY",
-                chat_url = "/v1/chat/completions",
-              },
-              schema = {
-                model = {
-                  default = "anthropic/claude-sonnet-4",
-                },
-              },
-            })
-          end,
-        },
-      })
-    end,
   },
 }
