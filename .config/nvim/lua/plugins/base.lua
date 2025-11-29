@@ -29,14 +29,15 @@ return {
     keys = {
       { "<c-y>", LazyVim.cmp.map({ "ai_nes" }, "<c-y>"), mode = { "n" }, expr = true },
     },
-    -- opts = {
-    --   cli = {
-    --     mux = {
-    --       enabled = true,
-    --       backend = "tmux",
-    --     },
-    --   },
-    -- }
+    opts = {
+      nes = { enabled = false },
+      -- cli = {
+      --   mux = {
+      --     enabled = true,
+      --     backend = "tmux",
+      --   },
+      -- },
+    }
   },
   {
     "mikavilpas/yazi.nvim",
