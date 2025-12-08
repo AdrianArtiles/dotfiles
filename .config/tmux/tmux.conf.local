@@ -227,7 +227,8 @@ tmux_conf_theme_window_status_current_format="#I #W#{?#{||:#{window_bell_flag},#
 
 # window activity status style
 tmux_conf_theme_window_status_activity_fg="default"
-tmux_conf_theme_window_status_activity_bg="default"
+# tmux_conf_theme_window_status_activity_bg="default"
+tmux_conf_theme_window_status_activity_bg="$tmux_conf_theme_colour_3"
 tmux_conf_theme_window_status_activity_attr="none"
 
 # window bell status style
@@ -491,6 +492,11 @@ tmux_conf_uninstall_plugins_on_reload=true
 # # usage: #{online}
 # online() {
 #   ping -c 1 1.1.1.1 >/dev/null 2>&1 && printf '✔' || printf '✘'
+# }
+#
+# # usage: #{dns_ip}
+# dns_ip() {
+#   dig +short myip.opendns.com @resolver1.opendns.com
 # }
 #
 # # usage: #{wan_ip_v4}
