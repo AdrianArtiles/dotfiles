@@ -162,6 +162,10 @@ precmd() {
 # ========================================
 
 bindkey -v                   # Use vi mode
+bindkey '^H' backward-delete-char
+bindkey '^?' backward-delete-char
+bindkey -M vicmd 'k' up-line
+bindkey -M vicmd 'j' down-line
 bindkey '^a' beginning-of-line
 bindkey '^e' end-of-line
 bindkey '^b' backward-word
