@@ -141,9 +141,12 @@ zstyle ':completion::*:(-command-|export):*' fake-parameters ${${${_comps[(I)-va
 # promptinit
 
 setopt PROMPT_SUBST
-PROMPT='
-%F{blue}%~%f
+PROMPT='%F{blue}%~%f
 ❯ '
+
+precmd() {
+  echo  # print a blank line before showing the prompt
+}
 
 # PROMPT='
 # %F{green}%*%f %F{blue}%~%f
