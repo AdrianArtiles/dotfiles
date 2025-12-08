@@ -5,12 +5,12 @@
 # BROWSERS & INTERNET
 # -----------------------------------------------------------------------------
 
-cask "firefox"
 cask "google-chrome"
 cask "tor-browser"
-cask "tunnelblick"
 cask "vivaldi"
-cask "qutebrowser"
+# cask "firefox"
+# cask "qutebrowser"
+# cask "tunnelblick"
 # cask "brave-browser"
 # cask "microsoft-edge"
 # cask "orion"
@@ -21,7 +21,6 @@ cask "qutebrowser"
 # PRODUCTIVITY & OFFICE
 # -----------------------------------------------------------------------------
 
-cask "calibre"
 cask "drawio"
 cask "linear-linear"
 cask "microsoft-excel"
@@ -31,7 +30,9 @@ cask "raycast"
 cask "setapp"
 cask "sublime-text"
 cask "claude"
-cask "homerow"
+brew "ollama"
+# cask "homerow"
+# cask "calibre"
 # cask "alt-tab"
 # cask "contexts"
 # cask "fantastical"
@@ -91,7 +92,7 @@ brew "ipfs"
 # -----------------------------------------------------------------------------
 
 cask "hammerspoon"
-cask "hyperkey"
+# cask "hyperkey" # functionality now in raycast
 # cask "karabiner-elements"
 # cask "lulu"
 
@@ -160,10 +161,10 @@ brew "jesseduffield/lazygit/lazygit"
 # DEVELOPMENT - LANGUAGES & RUNTIMES
 # -----------------------------------------------------------------------------
 
-brew "deno"
 brew "mise"
-# brew "asdf"
 brew "oven-sh/bun/bun"
+# brew "deno"
+# brew "asdf"
 # brew "pnpm" # consider using corepack
 
 
@@ -215,8 +216,9 @@ brew "zsh-autosuggestions"
 brew "zsh-history-substring-search"
 brew "zsh-fast-syntax-highlighting"
 brew "gnupg"
+brew "oath-toolkit"
 # brew "tree"
-brew "aichat"
+# brew "aichat"
 # brew "docutils"
 
 
@@ -272,11 +274,11 @@ brew "fastfetch"
 # CLI TOOLS - MEDIA & CONVERSION
 # -----------------------------------------------------------------------------
 
-brew "exiftool" # trialing yazi dependency"
+brew "exiftool" # trialing yazi dependency
 brew "ffmpeg"
-brew "ffmpegthumbnailer" # trialing yazi dependency"
+brew "ffmpegthumbnailer" # trialing yazi dependency
 brew "imagemagick"
-brew "poppler" # trialing yazi dependency"
+brew "poppler" # trialing yazi dependency
 brew "qrencode"
 
 
@@ -285,14 +287,14 @@ brew "qrencode"
 # DEVELOPMENT - NETWORKING & DEBUGGING
 # -----------------------------------------------------------------------------
 
-brew "mailsy"
 brew "navi"
-# cask "ngrok"
 brew "cloudflared"
 brew "pam-reattach"
 brew "watchman"
 cask "charles"
 cask "mitmproxy"
+# brew "mailsy"
+# cask "ngrok"
 # brew "http-server # using http-serve from prezto instead"
 # brew "pjproject"
 
