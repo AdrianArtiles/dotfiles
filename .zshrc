@@ -233,7 +233,7 @@ fi
 
 # zf - custom fzf + zoxide function to easily jump to frequently or recently used directories
 zf() {
-  cd "$(zoxide query --list --score | fzf --height 40% --layout reverse --info inline --border --preview "eza --all --group-directories-first --header --long --no-user --no-permissions --color=always {2}" --no-sort | awk '{print $2}')"
+  cd "$(zoxide query --list --score | fzf --height 40% --layout reverse --info inline --border --preview "eza --all --group-directories-first --header --long --no-user --no-permissions --color=always {2}" --preview-window=right,30% --no-sort | awk '{print $2}')"
 }
 
 # Load a .env file into the current shell
