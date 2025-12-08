@@ -179,22 +179,20 @@ bindkey '^f' forward-word
 alias git='noglob git'       # Remove zsh globbing for git
 alias gitd="git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME"
 alias editd="cd ~; GIT_DIR=~/.dotfiles.git $EDITOR"
-alias 'git?'='gh copilot suggest -t git'
 
 # File operations
 alias ccat='bat -pp'         # Use bat as a better cat
 alias ll='eza --all --group-directories-first --header --long'
 
-# Copilot aliases
-alias '??'='gh copilot suggest -t shell'
-alias explain='gh copilot explain'
+# AI aliases
+alias ai='ollama run llama3.1:8b'
+alias aic='ollama run qwen2.5-coder:7b'
 
 # Shortcuts
 alias cdd='cd ~/Desktop'
 alias lg='lazygit'
 alias tararchive='tar -cJvf archive.tar.xz'
 alias vd='visidata --theme=asciimono'
-alias aic='aichat --session'
 alias http-serve='python -m http.server'
 
 # ========================================
